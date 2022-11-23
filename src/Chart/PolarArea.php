@@ -1,15 +1,15 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Chart;
+namespace Nutsy\PHPChartJS\Chart;
 
-use Halfpastfour\PHPChartJS\Chart;
-use Halfpastfour\PHPChartJS\ChartInterface;
-use Halfpastfour\PHPChartJS\DataSet\PolarAreaDataSet;
-use Halfpastfour\PHPChartJS\Options\PolarAreaOptions;
+use Nutsy\PHPChartJS\Chart;
+use Nutsy\PHPChartJS\ChartInterface;
+use Nutsy\PHPChartJS\DataSet\PolarAreaDataSet;
+use Nutsy\PHPChartJS\Options\PolarAreaOptions;
 
 /**
  * Class PolarArea
- * @package Halfpastfour\PHPChartJS\Chart
+ * @package Nutsy\PHPChartJS\Chart
  *
  * @method PolarAreaDataSet createDataSet
  * @method PolarAreaOptions options

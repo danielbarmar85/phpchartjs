@@ -2,11 +2,11 @@
 
 require_once '../../vendor/autoload.php';
 
-use Halfpastfour\PHPChartJS\Factory;
+use Nutsy\PHPChartJS\Factory;
 
 $colors  = ["#FF6384", "#4BC0C0", "#FFCE56", "#E7E9ED", "#36A2EB"];
 $factory = new Factory();
-/** @var \Halfpastfour\PHPChartJS\Chart\PolarArea $polarArea */
+/** @var \Nutsy\PHPChartJS\Chart\PolarArea $polarArea */
 $polarArea = $factory->create($factory::POLAR_AREA);
 
 // Set labels

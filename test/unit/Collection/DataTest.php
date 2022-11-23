@@ -2,28 +2,31 @@
 
 namespace Collection;
 
-use Halfpastfour\PHPChartJS\Collection\Data;
-use PHPUnit_Framework_TestCase;
+use Nutsy\PHPChartJS\Collection\Data;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class DataTest
  *
  * @package Collection
  */
-class DataTest extends PHPUnit_Framework_TestCase
+class DataTest extends TestCase
 {
+
     /**
-     * @var  Data
+     * @var Data
      */
     private $data;
+
 
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->data = new Data();
     }
+
 
     /**
      *
@@ -34,4 +37,6 @@ class DataTest extends PHPUnit_Framework_TestCase
         $result   = $this->data->jsonSerialize();
         self::assertSame($expected, $result);
     }
+
+
 }

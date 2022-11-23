@@ -1,13 +1,13 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Delegate;
+namespace Nutsy\PHPChartJS\Delegate;
 
-use Halfpastfour\PHPChartJS\ArraySerializableInterface;
+use Nutsy\PHPChartJS\ArraySerializableInterface;
 
 /**
  * Class ArraySerializable
  *
- * @package Halfpastfour\PHPChartJS\Model
+ * @package Nutsy\PHPChartJS\Model
  */
 trait ArraySerializable
 {

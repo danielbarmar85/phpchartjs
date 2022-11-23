@@ -2,16 +2,16 @@
 
 namespace Test\Chart;
 
-use Halfpastfour\PHPChartJS\Chart\Radar;
-use Halfpastfour\PHPChartJS\ChartInterface;
-use Halfpastfour\PHPChartJS\DataSet\RadarDataSet;
-use Halfpastfour\PHPChartJS\Options\RadarOptions;
+use Nutsy\PHPChartJS\Chart\Radar;
+use Nutsy\PHPChartJS\ChartInterface;
+use Nutsy\PHPChartJS\DataSet\RadarDataSet;
+use Nutsy\PHPChartJS\Options\RadarOptions;
 
 /**
  * Class RadarTest
  * @package Test\Chart
  */
-class RadarTest extends \PHPUnit_Framework_TestCase
+class RadarTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Test the factory for creating a Radar chart

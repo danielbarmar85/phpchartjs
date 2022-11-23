@@ -2,7 +2,7 @@
 
 require_once '../../vendor/autoload.php';
 
-use Halfpastfour\PHPChartJS\Factory;
+use Nutsy\PHPChartJS\Factory;
 
 $colors  = [
     'rgb(73,10,61)',
@@ -14,9 +14,9 @@ $colors  = [
     'rgb(84,121,128)',
 ];
 $factory = new Factory();
-/** @var \Halfpastfour\PHPChartJS\Chart\Doughnut $doughnut */
+/** @var \Nutsy\PHPChartJS\Chart\Doughnut $doughnut */
 $doughnut = $factory->create($factory::DOUGHNUT);
-/** @var \Halfpastfour\PHPChartJS\Options\PieOptions $options */
+/** @var \Nutsy\PHPChartJS\Options\PieOptions $options */
 $options = $doughnut->options();
 $options->setCutoutPercentage(50)
     ->setCircumference(pi())

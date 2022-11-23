@@ -1,12 +1,12 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Options\Scales;
+namespace Nutsy\PHPChartJS\Options\Scales;
 
-use Halfpastfour\PHPChartJS\Options\Scale;
+use Nutsy\PHPChartJS\Options\Scale;
 
 /**
  * Class YAxis
- * @package Halfpastfour\PHPChartJS\Options\Scales
+ * @package Nutsy\PHPChartJS\Options\Scales
  */
 class YAxis extends Scale
 {

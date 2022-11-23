@@ -1,11 +1,11 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS;
+namespace Nutsy\PHPChartJS;
 
 /**
  * Class ChartOwned
  *
- * @package Halfpastfour\PHPChartJS
+ * @package Nutsy\PHPChartJS
  */
 trait ChartOwned
 {

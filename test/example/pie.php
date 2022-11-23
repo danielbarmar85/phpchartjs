@@ -2,7 +2,7 @@
 
 require_once '../../vendor/autoload.php';
 
-use Halfpastfour\PHPChartJS\Factory;
+use Nutsy\PHPChartJS\Factory;
 
 $colors = [
     'rgb(73,10,61)',
@@ -15,7 +15,7 @@ $colors = [
 ];
 
 $factory = new Factory();
-/** @var \Halfpastfour\PHPChartJS\Chart\Pie $pie */
+/** @var \Nutsy\PHPChartJS\Chart\Pie $pie */
 $pie = $factory->create($factory::PIE);
 
 // Set labels

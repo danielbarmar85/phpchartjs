@@ -1,15 +1,15 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Collection;
+namespace Nutsy\PHPChartJS\Collection;
 
 use Halfpastfour\Collection\Collection\ArrayAccess;
-use Halfpastfour\PHPChartJS\Delegate;
+use Nutsy\PHPChartJS\Delegate;
 use JsonSerializable as JsonSerializableInterface;
 
 /**
  * Class Data
  *
- * @package Halfpastfour\PHPChartJS\Collection
+ * @package Nutsy\PHPChartJS\Collection
  */
 class Data extends ArrayAccess implements JsonSerializableInterface
 {

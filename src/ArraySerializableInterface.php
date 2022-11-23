@@ -1,10 +1,10 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS;
+namespace Nutsy\PHPChartJS;
 
 /**
  * Interface ArraySerializableInterface
- * @package Halfpastfour\PHPChartJS
+ * @package Nutsy\PHPChartJS
  */
 interface ArraySerializableInterface
 {

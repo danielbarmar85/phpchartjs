@@ -2,8 +2,8 @@
 
 namespace Test\Options;
 
-use Halfpastfour\PHPChartJS\Options\Layout;
-use PHPUnit_Framework_TestCase;
+use Nutsy\PHPChartJS\Options\Layout;
+use PHPUnit\Framework\TestCase;
 use Test\TestUtils;
 
 /**
@@ -11,7 +11,7 @@ use Test\TestUtils;
  *
  * @package Test\Options
  */
-class LayoutTest extends PHPUnit_Framework_TestCase
+class LayoutTest extends TestCase
 {
     /**
      * @var Layout
@@ -42,7 +42,7 @@ class LayoutTest extends PHPUnit_Framework_TestCase
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->layout = new Layout();
     }

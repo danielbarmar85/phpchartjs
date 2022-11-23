@@ -2,17 +2,17 @@
 
 namespace Test\Chart;
 
-use Halfpastfour\PHPChartJS\Chart\Scatter;
-use Halfpastfour\PHPChartJS\ChartInterface;
-use Halfpastfour\PHPChartJS\DataSet\ScatterDataSet;
-use Halfpastfour\PHPChartJS\Options\ScatterOptions;
+use Nutsy\PHPChartJS\Chart\Scatter;
+use Nutsy\PHPChartJS\ChartInterface;
+use Nutsy\PHPChartJS\DataSet\ScatterDataSet;
+use Nutsy\PHPChartJS\Options\ScatterOptions;
 
 /**
  * Class ScatterTest
  *
  * @package Test\Chart
  */
-class ScatterTest extends \PHPUnit_Framework_TestCase
+class ScatterTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Test the factory for creating a Scatter chart

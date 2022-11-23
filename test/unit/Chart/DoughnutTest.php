@@ -2,16 +2,16 @@
 
 namespace Test\Chart;
 
-use Halfpastfour\PHPChartJS\Chart\Doughnut;
-use Halfpastfour\PHPChartJS\ChartInterface;
-use Halfpastfour\PHPChartJS\DataSet\PieDataSet;
-use Halfpastfour\PHPChartJS\Options\PieOptions;
+use Nutsy\PHPChartJS\Chart\Doughnut;
+use Nutsy\PHPChartJS\ChartInterface;
+use Nutsy\PHPChartJS\DataSet\PieDataSet;
+use Nutsy\PHPChartJS\Options\PieOptions;
 
 /**
  * Class DoughnutTest
  * @package Test\Chart
  */
-class DoughnutTest extends \PHPUnit_Framework_TestCase
+class DoughnutTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Test the factory for creating a Doughnut chart

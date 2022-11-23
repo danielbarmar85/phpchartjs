@@ -1,15 +1,15 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Chart;
+namespace Nutsy\PHPChartJS\Chart;
 
-use Halfpastfour\PHPChartJS\Chart;
-use Halfpastfour\PHPChartJS\DataSet\ScatterDataSet;
-use Halfpastfour\PHPChartJS\Options\ScatterOptions;
+use Nutsy\PHPChartJS\Chart;
+use Nutsy\PHPChartJS\DataSet\ScatterDataSet;
+use Nutsy\PHPChartJS\Options\ScatterOptions;
 
 /**
  * Class Scatter
  *
- * @package Halfpastfour\PHPChartJS\Chart
+ * @package Nutsy\PHPChartJS\Chart
  *
  * @method ScatterDataSet createDataSet
  * @method ScatterOptions options

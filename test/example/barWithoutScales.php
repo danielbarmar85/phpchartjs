@@ -2,8 +2,8 @@
 
 require_once '../../vendor/autoload.php';
 
-use Halfpastfour\PHPChartJS\Chart\Bar;
-use Halfpastfour\PHPChartJS\Options\BarOptions;
+use Nutsy\PHPChartJS\Chart\Bar;
+use Nutsy\PHPChartJS\Options\BarOptions;
 
 $bar = new Bar();
 $bar->setId('myChart');

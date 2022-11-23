@@ -1,10 +1,10 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS;
+namespace Nutsy\PHPChartJS;
 
 /**
  * Class Factory
- * @package Halfpastfour\PHPChartJS
+ * @package Nutsy\PHPChartJS
  */
 class Factory
 {
@@ -26,7 +26,7 @@ class Factory
     public function create($type)
     {
         $className  = ucfirst($type);
-        $namespace  = "\\Halfpastfour\\PHPChartJS\\Chart";
+        $namespace  = "\\Nutsy\\PHPChartJS\\Chart";
         $path       = "{$namespace}\\{$className}";
         if (! class_exists($path)) {
             throw new \InvalidArgumentException("Invalid chart type. {$path} does not exist.");

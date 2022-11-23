@@ -1,13 +1,13 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Options\Scales;
+namespace Nutsy\PHPChartJS\Options\Scales;
 
-use Halfpastfour\PHPChartJS\Options\Scale;
+use Nutsy\PHPChartJS\Options\Scale;
 
 /**
  * Class XAxis
  *
- * @package Halfpastfour\PHPChartJS\Options\Scales
+ * @package Nutsy\PHPChartJS\Options\Scales
  */
 class XAxis extends Scale
 {

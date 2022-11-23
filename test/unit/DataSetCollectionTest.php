@@ -1,15 +1,15 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS;
+namespace Nutsy\PHPChartJS;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class DataSetCollectionTest
  *
- * @package Halfpastfour\PHPChartJS
+ * @package Nutsy\PHPChartJS
  */
-class DataSetCollectionTest extends PHPUnit_Framework_TestCase
+class DataSetCollectionTest extends \PHPUnit\Framework\TestCase
 {
     /** @var  DataSetCollection */
     private $dataSetCollection;
@@ -17,7 +17,7 @@ class DataSetCollectionTest extends PHPUnit_Framework_TestCase
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->dataSetCollection = new DataSetCollection();
     }

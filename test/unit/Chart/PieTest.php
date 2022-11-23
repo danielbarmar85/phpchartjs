@@ -2,16 +2,16 @@
 
 namespace Test\Chart;
 
-use Halfpastfour\PHPChartJS\Chart\Pie;
-use Halfpastfour\PHPChartJS\ChartInterface;
-use Halfpastfour\PHPChartJS\DataSet\PieDataSet;
-use Halfpastfour\PHPChartJS\Options\PieOptions;
+use Nutsy\PHPChartJS\Chart\Pie;
+use Nutsy\PHPChartJS\ChartInterface;
+use Nutsy\PHPChartJS\DataSet\PieDataSet;
+use Nutsy\PHPChartJS\Options\PieOptions;
 
 /**
  * Class PieTest
  * @package Test\Chart
  */
-class PieTest extends \PHPUnit_Framework_TestCase
+class PieTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Test the factory for creating a Pie chart

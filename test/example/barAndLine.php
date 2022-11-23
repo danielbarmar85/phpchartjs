@@ -2,11 +2,11 @@
 
 require_once '../../vendor/autoload.php';
 
-use Halfpastfour\PHPChartJS\DataSet\LineDataSet;
-use Halfpastfour\PHPChartJS\Factory;
+use Nutsy\PHPChartJS\DataSet\LineDataSet;
+use Nutsy\PHPChartJS\Factory;
 
 $factory = new Factory();
-/** @var \Halfpastfour\PHPChartJS\Chart\Line $bar */
+/** @var \Nutsy\PHPChartJS\Chart\Line $bar */
 $bar = $factory->create($factory::BAR);
 
 // Set labels

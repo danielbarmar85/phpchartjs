@@ -1,14 +1,14 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Chart;
+namespace Nutsy\PHPChartJS\Chart;
 
-use Halfpastfour\PHPChartJS\Chart;
-use Halfpastfour\PHPChartJS\DataSet\BubbleDataSet;
-use Halfpastfour\PHPChartJS\Options\BubbleOptions;
+use Nutsy\PHPChartJS\Chart;
+use Nutsy\PHPChartJS\DataSet\BubbleDataSet;
+use Nutsy\PHPChartJS\Options\BubbleOptions;
 
 /**
  * Class Bubble
- * @package Halfpastfour\PHPChartJS\Chart
+ * @package Nutsy\PHPChartJS\Chart
  *
  * @method BubbleDataSet createDataSet
  * @method BubbleOptions options

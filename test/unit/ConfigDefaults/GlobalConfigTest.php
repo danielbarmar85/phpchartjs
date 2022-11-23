@@ -2,19 +2,19 @@
 
 namespace Test\ConfigDefaults;
 
-use Halfpastfour\PHPChartJS\ConfigDefaults\AnimationConfig;
-use Halfpastfour\PHPChartJS\ConfigDefaults\ElementsConfig;
-use Halfpastfour\PHPChartJS\ConfigDefaults\GlobalConfig;
-use Halfpastfour\PHPChartJS\ConfigDefaults\HoverConfig;
-use Halfpastfour\PHPChartJS\ConfigDefaults\LayoutConfig;
-use Halfpastfour\PHPChartJS\ConfigDefaults\TooltipsConfig;
+use Nutsy\PHPChartJS\ConfigDefaults\AnimationConfig;
+use Nutsy\PHPChartJS\ConfigDefaults\ElementsConfig;
+use Nutsy\PHPChartJS\ConfigDefaults\GlobalConfig;
+use Nutsy\PHPChartJS\ConfigDefaults\HoverConfig;
+use Nutsy\PHPChartJS\ConfigDefaults\LayoutConfig;
+use Nutsy\PHPChartJS\ConfigDefaults\TooltipsConfig;
 use Test\TestUtils;
 
 /**
  * Class GlobalConfigTest
  * @package Test\ConfigDefaults
  */
-class GlobalConfigTest extends \PHPUnit_Framework_TestCase
+class GlobalConfigTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var GlobalConfig $config
@@ -54,7 +54,7 @@ class GlobalConfigTest extends \PHPUnit_Framework_TestCase
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->config = GlobalConfig::getInstance();
     }

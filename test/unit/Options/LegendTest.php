@@ -2,10 +2,10 @@
 
 namespace Test\Options;
 
-use Halfpastfour\PHPChartJS\LabelsCollection;
-use Halfpastfour\PHPChartJS\Options\Legend;
+use Nutsy\PHPChartJS\LabelsCollection;
+use Nutsy\PHPChartJS\Options\Legend;
 use Laminas\Json\Expr;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Test\TestUtils;
 
 /**
@@ -13,7 +13,7 @@ use Test\TestUtils;
  *
  * @package Test\Options
  */
-class LegendTest extends PHPUnit_Framework_TestCase
+class LegendTest extends TestCase
 {
     /**
      * @var Legend
@@ -73,7 +73,7 @@ class LegendTest extends PHPUnit_Framework_TestCase
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->legend = new Legend();
 

@@ -1,15 +1,15 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Options\Scales;
+namespace Nutsy\PHPChartJS\Options\Scales;
 
 use Halfpastfour\Collection\Collection\ArrayAccess;
-use Halfpastfour\PHPChartJS\ArraySerializableInterface;
+use Nutsy\PHPChartJS\ArraySerializableInterface;
 use JsonSerializable;
 
 /**
  * Class YAxisCollection
  *
- * @package Halfpastfour\PHPChartJS\Collection
+ * @package Nutsy\PHPChartJS\Collection
  */
 class YAxisCollection extends ArrayAccess implements ArraySerializableInterface, JsonSerializable
 {

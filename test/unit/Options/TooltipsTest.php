@@ -2,8 +2,8 @@
 
 namespace Test\Options;
 
-use Halfpastfour\PHPChartJS\Options\Tooltips;
-use PHPUnit_Framework_TestCase;
+use Nutsy\PHPChartJS\Options\Tooltips;
+use PHPUnit\Framework\TestCase;
 use Test\TestUtils;
 
 /**
@@ -11,7 +11,7 @@ use Test\TestUtils;
  *
  * @package Test\Options
  */
-class TooltipsTest extends PHPUnit_Framework_TestCase
+class TooltipsTest extends TestCase
 {
     /**
      * @var Tooltips
@@ -169,7 +169,7 @@ class TooltipsTest extends PHPUnit_Framework_TestCase
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->tooltips = new Tooltips();
     }

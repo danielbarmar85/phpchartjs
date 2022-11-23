@@ -2,13 +2,13 @@
 
 namespace Test\Delegate;
 
-use Halfpastfour\PHPChartJS\Delegate\ArraySerializable;
+use Nutsy\PHPChartJS\Delegate\ArraySerializable;
 
 /**
  * Class ArraySerializableTest
  * @package Test\Delegate
  */
-class ArraySerializableTest extends \PHPUnit_Framework_TestCase
+class ArraySerializableTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var A
@@ -23,7 +23,7 @@ class ArraySerializableTest extends \PHPUnit_Framework_TestCase
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->classA = new A(1, 2);
         $this->classB = new B(3, 4, 5, 6);

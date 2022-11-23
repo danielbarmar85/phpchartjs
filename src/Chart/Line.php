@@ -1,14 +1,14 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Chart;
+namespace Nutsy\PHPChartJS\Chart;
 
-use Halfpastfour\PHPChartJS\Chart;
-use Halfpastfour\PHPChartJS\DataSet\LineDataSet;
-use Halfpastfour\PHPChartJS\Options\LineOptions;
+use Nutsy\PHPChartJS\Chart;
+use Nutsy\PHPChartJS\DataSet\LineDataSet;
+use Nutsy\PHPChartJS\Options\LineOptions;
 
 /**
  * Class Line
- * @package Halfpastfour\PHPChartJS\Chart
+ * @package Nutsy\PHPChartJS\Chart
  * @method LineDataSet createDataSet()
  */
 class Line extends Chart

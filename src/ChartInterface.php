@@ -1,12 +1,12 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS;
+namespace Nutsy\PHPChartJS;
 
 use Halfpastfour\Collection\CollectionInterface;
 
 /**
  * Interface ChartInterface
- * @package Halfpastfour\PHPChartJS
+ * @package Nutsy\PHPChartJS
  */
 interface ChartInterface
 {

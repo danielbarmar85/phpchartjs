@@ -1,14 +1,14 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Delegate;
+namespace Nutsy\PHPChartJS\Delegate;
 
-use Halfpastfour\PHPChartJS\ArraySerializableInterface;
+use Nutsy\PHPChartJS\ArraySerializableInterface;
 use JsonSerializable as JsonSerializableInterface;
 
 /**
  * Trait JsonSerializable
  *
- * @package Halfpastfour\PHPChartJS\Delegate
+ * @package Nutsy\PHPChartJS\Delegate
  */
 trait JsonSerializable
 {

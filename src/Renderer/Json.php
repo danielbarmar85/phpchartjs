@@ -1,13 +1,13 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Renderer;
+namespace Nutsy\PHPChartJS\Renderer;
 
 use Laminas\Json\Json as JsonHelper;
 
 /**
  * Class Json
  *
- * @package Halfpastfour\PHPChartJS\Renderer
+ * @package Nutsy\PHPChartJS\Renderer
  */
 class Json extends Renderer
 {

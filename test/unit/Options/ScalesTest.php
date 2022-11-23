@@ -2,15 +2,15 @@
 
 namespace Test\Options;
 
-use Halfpastfour\PHPChartJS\Options\Scales;
-use PHPUnit_Framework_TestCase;
+use Nutsy\PHPChartJS\Options\Scales;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class ScalesTest
  *
  * @package Test\Options
  */
-class ScalesTest extends PHPUnit_Framework_TestCase
+class ScalesTest extends TestCase
 {
     /**
      * @var Scales
@@ -20,7 +20,7 @@ class ScalesTest extends PHPUnit_Framework_TestCase
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->scales = new Scales();
     }

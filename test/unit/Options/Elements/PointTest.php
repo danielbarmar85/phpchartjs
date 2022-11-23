@@ -2,8 +2,8 @@
 
 namespace Test\Options\Elements;
 
-use Halfpastfour\PHPChartJS\Options\Elements\Point;
-use PHPUnit_Framework_TestCase;
+use Nutsy\PHPChartJS\Options\Elements\Point;
+use PHPUnit\Framework\TestCase;
 use Test\TestUtils;
 
 /**
@@ -11,7 +11,7 @@ use Test\TestUtils;
  *
  * @package Test\Options\Elements
  */
-class PointTest extends PHPUnit_Framework_TestCase
+class PointTest extends TestCase
 {
     /**
      * @var Point
@@ -66,7 +66,7 @@ class PointTest extends PHPUnit_Framework_TestCase
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->point = new Point();
     }

@@ -1,17 +1,17 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Options\Scales;
+namespace Nutsy\PHPChartJS\Options\Scales;
 
-use Halfpastfour\PHPChartJS\ArraySerializableInterface;
-use Halfpastfour\PHPChartJS\Delegate\ArraySerializable;
-use Halfpastfour\PHPChartJS\Delegate\NumberUtils;
-use Halfpastfour\PHPChartJS\Delegate\StringUtils;
+use Nutsy\PHPChartJS\ArraySerializableInterface;
+use Nutsy\PHPChartJS\Delegate\ArraySerializable;
+use Nutsy\PHPChartJS\Delegate\NumberUtils;
+use Nutsy\PHPChartJS\Delegate\StringUtils;
 use JsonSerializable;
 
 /**
  * Class GridLines
  *
- * @package Halfpastfour\PHPChartJS\Options\Scales
+ * @package Nutsy\PHPChartJS\Options\Scales
  */
 class GridLines implements ArraySerializableInterface, JsonSerializable
 {

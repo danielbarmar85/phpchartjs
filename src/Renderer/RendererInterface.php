@@ -1,8 +1,8 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Renderer;
+namespace Nutsy\PHPChartJS\Renderer;
 
-use Halfpastfour\PHPChartJS\Chart;
+use Nutsy\PHPChartJS\Chart;
 
 /**
  * Interface RendererInterface

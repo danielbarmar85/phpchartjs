@@ -3,22 +3,23 @@
 namespace Test;
 
 use DOMDocument;
-use Halfpastfour\PHPChartJS\Chart;
-use Halfpastfour\PHPChartJS\Chart\Bar;
-use Halfpastfour\PHPChartJS\DataSet;
-use Halfpastfour\PHPChartJS\DataSet\BarDataSet;
-use Halfpastfour\PHPChartJS\DataSetCollection;
-use Halfpastfour\PHPChartJS\LabelsCollection;
-use Halfpastfour\PHPChartJS\Options\BarOptions;
-use PHPUnit_Framework_TestCase;
+use Nutsy\PHPChartJS\Chart;
+use Nutsy\PHPChartJS\Chart\Bar;
+use Nutsy\PHPChartJS\DataSet;
+use Nutsy\PHPChartJS\DataSet\BarDataSet;
+use Nutsy\PHPChartJS\DataSetCollection;
+use Nutsy\PHPChartJS\LabelsCollection;
+use Nutsy\PHPChartJS\Options\BarOptions;
+use \PHPUnit\Framework\TestCase;
 
 /**
  * Class ChartTest
  *
- * @package Halfpastfour\PHPChartJS
+ * @package Nutsy\PHPChartJS
  */
-class ChartTest extends PHPUnit_Framework_TestCase
+class ChartTest extends TestCase
 {
+
     /**
      * @var Chart
      */
@@ -28,30 +29,41 @@ class ChartTest extends PHPUnit_Framework_TestCase
      * @var array
      */
     private $data_types = [
-        'height'   => 'height', /* int */
-        'width'    => 'width', /* int */
-        'title'    => 'title', /* string */
-        'labels'   => 'labels', /* LabelsCollection */
-        'options'  => 'options', /* Options */
-        'dataSets' => 'dataSets', /* DataSetCollection */
+        'height'   => 'height',
+    // int
+        'width'    => 'width',
+    // int
+        'title'    => 'title',
+    // string
+        'labels'   => 'labels',
+    // LabelsCollection
+        'options'  => 'options',
+    // Options
+        'dataSets' => 'dataSets',
+    // DataSetCollection
     ];
 
     /**
      * @var array
      */
     private $empty_data = [
-        'height' => null, /* int */
-        'width'  => null, /* int */
-        'title'  => null, /* string */
+        'height' => null,
+    // int
+        'width'  => null,
+    // int
+        'title'  => null,
+    // string
     ];
+
 
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->chart = new Bar();
     }
+
 
     /**
      *
@@ -61,6 +73,7 @@ class ChartTest extends PHPUnit_Framework_TestCase
         $result = $this->chart->getId();
         self::assertNotNull($result);
     }
+
 
     /**
      *
@@ -72,6 +85,7 @@ class ChartTest extends PHPUnit_Framework_TestCase
         self::assertSame($expected, $this->chart->getId());
     }
 
+
     /**
      *
      */
@@ -81,6 +95,7 @@ class ChartTest extends PHPUnit_Framework_TestCase
         $result   = TestUtils::getAttributes($this->chart, $this->data_types);
         self::assertSame($expected, $result);
     }
+
 
     /**
      *
@@ -93,6 +108,7 @@ class ChartTest extends PHPUnit_Framework_TestCase
         self::assertSame($expected, $result);
     }
 
+
     /**
      *
      */
@@ -103,6 +119,7 @@ class ChartTest extends PHPUnit_Framework_TestCase
         $result = $this->chart->getWidth();
         self::assertSame($expected, $result);
     }
+
 
     /**
      *
@@ -115,6 +132,7 @@ class ChartTest extends PHPUnit_Framework_TestCase
         self::assertSame($expected, $result);
     }
 
+
     /**
      *
      */
@@ -123,6 +141,7 @@ class ChartTest extends PHPUnit_Framework_TestCase
         $result = $this->chart->labels();
         self::assertInstanceOf(LabelsCollection::class, $result);
     }
+
 
     /**
      *
@@ -136,6 +155,7 @@ class ChartTest extends PHPUnit_Framework_TestCase
         self::assertNotSame($labels, $result);
         self::assertEquals($labels, $result);
     }
+
 
     /**
      *
@@ -152,6 +172,7 @@ class ChartTest extends PHPUnit_Framework_TestCase
         self::assertNull($result1);
     }
 
+
     /**
      *
      */
@@ -165,6 +186,7 @@ class ChartTest extends PHPUnit_Framework_TestCase
         self::assertNull($result1);
     }
 
+
     /**
      *
      */
@@ -175,6 +197,7 @@ class ChartTest extends PHPUnit_Framework_TestCase
         self::assertNotSame($expected, $result);
         self::assertEquals($expected, $result);
     }
+
 
     /**
      *
@@ -190,6 +213,7 @@ class ChartTest extends PHPUnit_Framework_TestCase
         self::assertEquals($dataSet1, $dataSet2);
     }
 
+
     /**
      *
      */
@@ -198,6 +222,7 @@ class ChartTest extends PHPUnit_Framework_TestCase
         $result = $this->chart->getDataSet(0);
         self::assertNull($result);
     }
+
 
     /**
      *
@@ -210,18 +235,20 @@ class ChartTest extends PHPUnit_Framework_TestCase
         self::assertSame($dataSet, $result);
     }
 
+
     /**
      *
      */
     public function testRenderCanvas()
     {
-        $chartHtml = "<div>" . $this->chart->render() . "</div>";
+        $chartHtml = '<div>'.$this->chart->render().'</div>';
         $htmlDoc   = new DOMDocument();
         $htmlDoc->loadXML($chartHtml);
         $canvas = $htmlDoc->getElementsByTagName('canvas')->item(0);
         $result = $canvas->getAttribute('id');
         self::assertStringStartsWith('chart', $result);
     }
+
 
     /**
      *
@@ -230,13 +257,14 @@ class ChartTest extends PHPUnit_Framework_TestCase
     {
         $expected = '500';
         $this->chart->setHeight($expected);
-        $chartHtml = "<div>" . $this->chart->render(true) . "</div>";
+        $chartHtml = '<div>'.$this->chart->render(true).'</div>';
         $htmlDoc   = new DOMDocument();
         $htmlDoc->loadXML($chartHtml);
         $canvas = $htmlDoc->getElementsByTagName('canvas')->item(0);
         $result = $canvas->getAttribute('height');
         self::assertSame($expected, $result);
     }
+
 
     /**
      *
@@ -245,7 +273,7 @@ class ChartTest extends PHPUnit_Framework_TestCase
     {
         $expected = '500';
         $this->chart->setWidth($expected);
-        $chartHtml = "<div>" . $this->chart->render(true) . "</div>";
+        $chartHtml = '<div>'.$this->chart->render(true).'</div>';
         $htmlDoc   = new DOMDocument();
         $htmlDoc->loadXML($chartHtml);
         $canvas = $htmlDoc->getElementsByTagName('canvas')->item(0);
@@ -253,17 +281,19 @@ class ChartTest extends PHPUnit_Framework_TestCase
         self::assertSame($expected, $result);
     }
 
+
     /**
      *
      */
     public function testRenderScript()
     {
-        $chartHtml = "<div>" . $this->chart->render(true) . "</div>";
+        $chartHtml = '<div>'.$this->chart->render(true).'</div>';
         $htmlDoc   = new DOMDocument();
         $htmlDoc->loadXML($chartHtml);
         $script = $htmlDoc->getElementsByTagName('script')->item(0);
         self::assertNotEmpty($script->nodeValue);
     }
+
 
     /**
      *
@@ -274,6 +304,7 @@ class ChartTest extends PHPUnit_Framework_TestCase
         self::assertInstanceOf(BarDataSet::class, $result);
     }
 
+
     /**
      *
      */
@@ -282,4 +313,6 @@ class ChartTest extends PHPUnit_Framework_TestCase
         $result = $this->chart->options();
         self::assertInstanceOf(BarOptions::class, $result);
     }
+
+
 }

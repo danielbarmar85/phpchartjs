@@ -1,10 +1,10 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Chart;
+namespace Nutsy\PHPChartJS\Chart;
 
 /**
  * Class HorizontalBar
- * @package Halfpastfour\PHPChartJS\Chart
+ * @package Nutsy\PHPChartJS\Chart
  */
 class HorizontalBar extends Bar
 {

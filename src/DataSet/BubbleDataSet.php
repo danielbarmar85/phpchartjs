@@ -1,13 +1,13 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\DataSet;
+namespace Nutsy\PHPChartJS\DataSet;
 
-use Halfpastfour\PHPChartJS\DataSet;
+use Nutsy\PHPChartJS\DataSet;
 
 /**
  * Class BubbleDataSet
  *
- * @package Halfpastfour\PHPChartJS\DataSet
+ * @package Nutsy\PHPChartJS\DataSet
  */
 class BubbleDataSet extends DataSet
 {
@@ -32,7 +32,7 @@ class BubbleDataSet extends DataSet
     /**
      * @param string $pointStyle
      *
-     * @return \Halfpastfour\PHPChartJS\DataSet\BubbleDataSet
+     * @return \Nutsy\PHPChartJS\DataSet\BubbleDataSet
      */
     public function setPointStyle($pointStyle)
     {
@@ -52,7 +52,7 @@ class BubbleDataSet extends DataSet
     /**
      * @param int $radius
      *
-     * @return \Halfpastfour\PHPChartJS\DataSet\BubbleDataSet
+     * @return \Nutsy\PHPChartJS\DataSet\BubbleDataSet
      */
     public function setRadius($radius)
     {

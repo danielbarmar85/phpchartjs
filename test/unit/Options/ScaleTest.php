@@ -2,11 +2,11 @@
 
 namespace Test\Options;
 
-use Halfpastfour\PHPChartJS\Options\Scale;
-use Halfpastfour\PHPChartJS\Options\Scales\GridLines;
-use Halfpastfour\PHPChartJS\Options\Scales\ScaleLabel;
-use Halfpastfour\PHPChartJS\Options\Scales\Ticks;
-use PHPUnit_Framework_TestCase;
+use Nutsy\PHPChartJS\Options\Scale;
+use Nutsy\PHPChartJS\Options\Scales\GridLines;
+use Nutsy\PHPChartJS\Options\Scales\ScaleLabel;
+use Nutsy\PHPChartJS\Options\Scales\Ticks;
+use PHPUnit\Framework\TestCase;
 use Test\TestUtils;
 
 /**
@@ -23,7 +23,7 @@ class AScale extends Scale
  *
  * @package Test\Options
  */
-class ScaleTest extends PHPUnit_Framework_TestCase
+class ScaleTest extends TestCase
 {
     /**
      * @var Scale
@@ -120,7 +120,7 @@ class ScaleTest extends PHPUnit_Framework_TestCase
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->scale = new AScale();
     }

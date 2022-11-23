@@ -2,8 +2,8 @@
 
 namespace Options;
 
-use Halfpastfour\PHPChartJS\Options\Animation;
-use PHPUnit_Framework_TestCase;
+use Nutsy\PHPChartJS\Options\Animation;
+use PHPUnit\Framework\TestCase;
 use Test\TestUtils;
 
 /**
@@ -11,7 +11,7 @@ use Test\TestUtils;
  *
  * @package Test\Options
  */
-class AnimationTest extends PHPUnit_Framework_TestCase
+class AnimationTest extends TestCase
 {
     /**
      * @var Animation
@@ -61,7 +61,7 @@ class AnimationTest extends PHPUnit_Framework_TestCase
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->animation = new Animation();
     }

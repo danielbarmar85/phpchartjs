@@ -2,15 +2,15 @@
 
 namespace Test\Options\Legend;
 
-use Halfpastfour\PHPChartJS\Options\Legend\Labels;
-use PHPUnit_Framework_TestCase;
+use Nutsy\PHPChartJS\Options\Legend\Labels;
+use PHPUnit\Framework\TestCase;
 use Test\TestUtils;
 
 /**
  * Class LabelsTest
  * @package Test\Options\Legend
  */
-class LabelsTest extends PHPUnit_Framework_TestCase
+class LabelsTest extends TestCase
 {
     /**
      * @var Labels $labels
@@ -78,7 +78,7 @@ class LabelsTest extends PHPUnit_Framework_TestCase
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->labels = new Labels();
     }

@@ -1,28 +1,28 @@
 ### Stable
-[![Latest Stable Version](https://poser.pugx.org/halfpastfouram/phpchartjs/v/stable)](https://packagist.org/packages/halfpastfouram/phpchartjs)
-[![Total Downloads](https://poser.pugx.org/halfpastfouram/phpchartjs/downloads)](https://packagist.org/packages/halfpastfouram/phpchartjs)
-[![License](https://poser.pugx.org/halfpastfouram/phpchartjs/license)](https://packagist.org/packages/halfpastfouram/phpchartjs)
-[![composer.lock](https://poser.pugx.org/halfpastfouram/phpchartjs/composerlock)](https://packagist.org/packages/halfpastfouram/phpchartjs)
-[![Build Status](https://travis-ci.org/halfpastfouram/PHPChartJS.svg?branch=master)](https://travis-ci.org/halfpastfouram/PHPChartJS)
-[![Code Climate](https://codeclimate.com/github/halfpastfouram/PHPChartJS/badges/gpa.svg)](https://codeclimate.com/github/halfpastfouram/PHPChartJS)
-[![Test Coverage](https://codeclimate.com/github/halfpastfouram/PHPChartJS/badges/coverage.svg)](https://codeclimate.com/github/halfpastfouram/PHPChartJS/coverage)
-[![Quality](https://scrutinizer-ci.com/g/halfpastfouram/PHPChartJS/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/halfpastfouram/PHPChartJS/)
+[![Latest Stable Version](https://poser.pugx.org/Nutsyam/phpchartjs/v/stable)](https://packagist.org/packages/Nutsyam/phpchartjs)
+[![Total Downloads](https://poser.pugx.org/Nutsyam/phpchartjs/downloads)](https://packagist.org/packages/Nutsyam/phpchartjs)
+[![License](https://poser.pugx.org/Nutsyam/phpchartjs/license)](https://packagist.org/packages/Nutsyam/phpchartjs)
+[![composer.lock](https://poser.pugx.org/Nutsyam/phpchartjs/composerlock)](https://packagist.org/packages/Nutsyam/phpchartjs)
+[![Build Status](https://travis-ci.org/Nutsyam/PHPChartJS.svg?branch=master)](https://travis-ci.org/Nutsyam/PHPChartJS)
+[![Code Climate](https://codeclimate.com/github/Nutsyam/PHPChartJS/badges/gpa.svg)](https://codeclimate.com/github/Nutsyam/PHPChartJS)
+[![Test Coverage](https://codeclimate.com/github/Nutsyam/PHPChartJS/badges/coverage.svg)](https://codeclimate.com/github/Nutsyam/PHPChartJS/coverage)
+[![Quality](https://scrutinizer-ci.com/g/Nutsyam/PHPChartJS/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Nutsyam/PHPChartJS/)
 
 ### Development
-[![Latest Unstable Version](https://poser.pugx.org/halfpastfouram/phpchartjs/v/unstable)](https://packagist.org/packages/halfpastfouram/phpchartjs)
-[![Build Status](https://travis-ci.org/halfpastfouram/PHPChartJS.svg?branch=dev)](https://travis-ci.org/halfpastfouram/PHPChartJS)
+[![Latest Unstable Version](https://poser.pugx.org/Nutsyam/phpchartjs/v/unstable)](https://packagist.org/packages/Nutsyam/phpchartjs)
+[![Build Status](https://travis-ci.org/Nutsyam/PHPChartJS.svg?branch=dev)](https://travis-ci.org/Nutsyam/PHPChartJS)
 
 # PHPChartJS
 PHP OOP library for [ChartJS](http://www.chartjs.org/)
 
 PHPChartJS acts as an interface between the ChartJS library and the server side code. Set up a chart in no time and have every aspect of the graph managable from your PHP code. This interface is set up to provide code completion in every scenario so you never have to guess or lookup what options are available for the chosen chart. The library is entirely object oriented.
 
-This library is still in active development and aims to implement all options ChartJS has to offer. Check the [Configuration milestone](https://github.com/halfpastfouram/PHPChartJS/milestone/1) to view the progress of implementing all existing options.
+This library is still in active development and aims to implement all options ChartJS has to offer. Check the [Configuration milestone](https://github.com/Nutsyam/PHPChartJS/milestone/1) to view the progress of implementing all existing options.
 
 ## Example use
 ````php
 <?php
-use Halfpastfour\PHPChartJS\Chart\Bar;
+use Nutsy\PHPChartJS\Chart\Bar;
 
 $bar = new Bar();
 $bar->setId("myBar");
@@ -153,12 +153,12 @@ $oldData = $dataset->data()->exchangeArray([1, 2, 3]); // array(3) { [0]=> int(1
 
 $myChart->addDataSet($dataset);
 ````
-For more information about the collections visit the [halfpastfouram/collection](https://github.com/halfpastfouram/collection) project.
+For more information about the collections visit the [Nutsyam/collection](https://github.com/Nutsyam/collection) project.
 
 ## Installation
 
 ### Using composer
-    $ composer require halfpastfouram/phpchartjs
+    $ composer require Nutsyam/phpchartjs
 
 ### Development
 This project uses composer, which should be installed on your system. Most

@@ -1,12 +1,12 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Options\Animation;
+namespace Nutsy\PHPChartJS\Options\Animation;
 
-use Halfpastfour\PHPChartJS\Options\Animation;
+use Nutsy\PHPChartJS\Options\Animation;
 
 /**
  * Class PieAnimation
- * @package Halfpastfour\PHPChartJS\Options\Animation
+ * @package Nutsy\PHPChartJS\Options\Animation
  */
 class PieAnimation extends Animation
 {

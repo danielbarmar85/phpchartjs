@@ -2,16 +2,16 @@
 
 namespace Test\Options\Scales;
 
-use Halfpastfour\PHPChartJS\Options\Scales\XAxis;
-use Halfpastfour\PHPChartJS\Options\Scales\XAxisCollection;
-use PHPUnit_Framework_TestCase;
+use Nutsy\PHPChartJS\Options\Scales\XAxis;
+use Nutsy\PHPChartJS\Options\Scales\XAxisCollection;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class XAxisCollectionTest
  *
  * @package Test\Options\Scales
  */
-class XAxisCollectionTest extends PHPUnit_Framework_TestCase
+class XAxisCollectionTest extends TestCase
 {
     /**
      * @var XAxisCollection
@@ -26,7 +26,7 @@ class XAxisCollectionTest extends PHPUnit_Framework_TestCase
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->xAxisCollection = new XAxisCollection();
         $this->input_data      = [];

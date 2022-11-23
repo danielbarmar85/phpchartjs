@@ -1,15 +1,15 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS;
+namespace Nutsy\PHPChartJS;
 
-use Halfpastfour\PHPChartJS\Collection\Data;
-use Halfpastfour\PHPChartJS\Delegate;
+use Nutsy\PHPChartJS\Collection\Data;
+use Nutsy\PHPChartJS\Delegate;
 use JsonSerializable as JsonSerializableInterface;
 
 /**
  * Class DataSet
  *
- * @package Halfpastfour\PHPChartJS
+ * @package Nutsy\PHPChartJS
  */
 class DataSet implements ChartOwnedInterface, ArraySerializableInterface, JsonSerializableInterface
 {

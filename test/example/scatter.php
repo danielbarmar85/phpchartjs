@@ -2,11 +2,11 @@
 
 require_once '../../vendor/autoload.php';
 
-use Halfpastfour\PHPChartJS\Factory;
-use Halfpastfour\PHPChartJS\Options\ScatterOptions;
+use Nutsy\PHPChartJS\Factory;
+use Nutsy\PHPChartJS\Options\ScatterOptions;
 
 $factory = new Factory();
-/** @var \Halfpastfour\PHPChartJS\Chart\Scatter $scatter */
+/** @var \Nutsy\PHPChartJS\Chart\Scatter $scatter */
 $scatter = $factory->create($factory::SCATTER);
 $scatter->setTitle('Scatter chart');
 

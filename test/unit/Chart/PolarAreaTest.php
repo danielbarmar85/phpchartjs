@@ -2,16 +2,16 @@
 
 namespace Test\Chart;
 
-use Halfpastfour\PHPChartJS\Chart\PolarArea;
-use Halfpastfour\PHPChartJS\ChartInterface;
-use Halfpastfour\PHPChartJS\DataSet\PolarAreaDataSet;
-use Halfpastfour\PHPChartJS\Options\PolarAreaOptions;
+use Nutsy\PHPChartJS\Chart\PolarArea;
+use Nutsy\PHPChartJS\ChartInterface;
+use Nutsy\PHPChartJS\DataSet\PolarAreaDataSet;
+use Nutsy\PHPChartJS\Options\PolarAreaOptions;
 
 /**
  * Class PolarAreaTest
  * @package Test\Chart
  */
-class PolarAreaTest extends \PHPUnit_Framework_TestCase
+class PolarAreaTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Test the factory for creating a PolarArea chart

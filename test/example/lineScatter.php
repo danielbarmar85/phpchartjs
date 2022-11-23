@@ -2,10 +2,10 @@
 
 require_once '../../vendor/autoload.php';
 
-use Halfpastfour\PHPChartJS\Factory;
+use Nutsy\PHPChartJS\Factory;
 
 $factory = new Factory();
-/** @var \Halfpastfour\PHPChartJS\Chart\Line $line */
+/** @var \Nutsy\PHPChartJS\Chart\Line $line */
 $line = $factory->create($factory::LINE);
 
 // Add Datasets

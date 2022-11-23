@@ -1,12 +1,12 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Renderer;
+namespace Nutsy\PHPChartJS\Renderer;
 
-use Halfpastfour\PHPChartJS\Chart;
+use Nutsy\PHPChartJS\Chart;
 
 /**
  * Class Renderer
- * @package Halfpastfour\PHPChartJS\Renderer
+ * @package Nutsy\PHPChartJS\Renderer
  */
 abstract class Renderer implements RendererInterface
 {

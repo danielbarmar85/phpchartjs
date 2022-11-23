@@ -1,5 +1,5 @@
 {
-  "name": "halfpastfouram/phpchartjs",
+  "name": "nutsy/phpchartjs",
   "description": "PHP library for ChartJS",
   "keywords": [
     "chartjs",
@@ -7,32 +7,33 @@
     "php"
   ],
   "readme": "README.md",
-  "homepage": "http://halfpastfouram.github.io/PHPChartJS",
+  "homepage": "https://thenutsycompany.com/",
   "type": "package",
-  "version": "v1.2.2",
+  "version": "v1.0.0",
   "license": "AGPL-3.0-or-later",
   "authors": [
     {
-      "name": "Bob Kruithof"
+      "name": "Bob Kruithof",
+      "name": "Daniel Barbero"
     }
   ],
   "require": {
-    "php": ">=5.6.0 || ^7.0",
+    "php": ">=8.0",
     "ext-dom": "*",
     "ext-json": "*",
-    "laminas/laminas-json": "3.1.2",
+    "laminas/laminas-json": ">3.1.2",
     "halfpastfouram/collection": "1.0.0",
     "symfony/var-dumper": "^3.4"
   },
   "require-dev": {
-    "phpunit/phpunit": "5.7.*",
+    "phpunit/phpunit": "^9.5",
     "squizlabs/php_codesniffer": "3.5.3",
     "friendsofphp/php-cs-fixer": "*",
     "sensiolabs/security-checker": "^5.0"
   },
   "autoload": {
     "psr-4": {
-      "Halfpastfour\\PHPChartJS\\": "src/",
+      "Nutsy\\PHPChartJS\\": "src/",
       "Test\\": "test/"
     }
   },

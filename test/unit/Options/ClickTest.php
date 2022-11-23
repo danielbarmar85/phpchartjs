@@ -2,9 +2,9 @@
 
 namespace Test\Options;
 
-use Halfpastfour\PHPChartJS\Options;
+use Nutsy\PHPChartJS\Options;
 use Laminas\Json\Expr;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Test\TestUtils;
 
 /**
@@ -12,7 +12,7 @@ use Test\TestUtils;
  *
  * @package Test\Options
  */
-class ClickTest extends PHPUnit_Framework_TestCase
+class ClickTest extends TestCase
 {
     /**
      * @var Options
@@ -29,7 +29,7 @@ class ClickTest extends PHPUnit_Framework_TestCase
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->options                     = new Options();
         $this->input_data_with_expressions = ['onClick' => new Expr('function(event, array) { echo "onClick"; }')];

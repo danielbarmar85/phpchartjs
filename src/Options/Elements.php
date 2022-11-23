@@ -1,19 +1,19 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Options;
+namespace Nutsy\PHPChartJS\Options;
 
-use Halfpastfour\PHPChartJS\ArraySerializableInterface;
-use Halfpastfour\PHPChartJS\Delegate\ArraySerializable;
-use Halfpastfour\PHPChartJS\Options\Elements\Arc;
-use Halfpastfour\PHPChartJS\Options\Elements\Line;
-use Halfpastfour\PHPChartJS\Options\Elements\Point;
-use Halfpastfour\PHPChartJS\Options\Elements\Rectangle;
+use Nutsy\PHPChartJS\ArraySerializableInterface;
+use Nutsy\PHPChartJS\Delegate\ArraySerializable;
+use Nutsy\PHPChartJS\Options\Elements\Arc;
+use Nutsy\PHPChartJS\Options\Elements\Line;
+use Nutsy\PHPChartJS\Options\Elements\Point;
+use Nutsy\PHPChartJS\Options\Elements\Rectangle;
 use JsonSerializable;
 
 /**
  * Class Elements
  *
- * @package Halfpastfour\PHPChartJS\Options
+ * @package Nutsy\PHPChartJS\Options
  */
 class Elements implements ArraySerializableInterface, JsonSerializable
 {

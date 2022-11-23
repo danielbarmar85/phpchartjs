@@ -1,15 +1,15 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Options\Scales;
+namespace Nutsy\PHPChartJS\Options\Scales;
 
-use Halfpastfour\PHPChartJS\ArraySerializableInterface;
-use Halfpastfour\PHPChartJS\Delegate\ArraySerializable;
+use Nutsy\PHPChartJS\ArraySerializableInterface;
+use Nutsy\PHPChartJS\Delegate\ArraySerializable;
 use JsonSerializable;
 
 /**
  * Class ScaleLabel
  *
- * @package Halfpastfour\PHPChartJS\Options\Scales
+ * @package Nutsy\PHPChartJS\Options\Scales
  */
 class ScaleLabel implements ArraySerializableInterface, JsonSerializable
 {

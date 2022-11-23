@@ -1,12 +1,12 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Options;
+namespace Nutsy\PHPChartJS\Options;
 
-use Halfpastfour\PHPChartJS\Options;
+use Nutsy\PHPChartJS\Options;
 
 /**
  * Class ScatterOptions
- * @package Halfpastfour\PHPChartJS\Options
+ * @package Nutsy\PHPChartJS\Options
  */
 class ScatterOptions extends Options
 {

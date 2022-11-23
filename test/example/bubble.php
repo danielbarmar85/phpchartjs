@@ -2,10 +2,10 @@
 
 require_once '../../vendor/autoload.php';
 
-use Halfpastfour\PHPChartJS\Factory;
+use Nutsy\PHPChartJS\Factory;
 
 $factory = new Factory();
-/** @var \Halfpastfour\PHPChartJS\Chart\Bubble $bubble */
+/** @var \Nutsy\PHPChartJS\Chart\Bubble $bubble */
 $bubble = $factory->create($factory::BUBBLE);
 
 // Set labels

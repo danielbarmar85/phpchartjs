@@ -1,11 +1,11 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Renderer;
+namespace Nutsy\PHPChartJS\Renderer;
 
 /**
  * Class JavaScript
  *
- * @package Halfpastfour\PHPChartJS\Renderer
+ * @package Nutsy\PHPChartJS\Renderer
  */
 class JavaScript extends Renderer
 {

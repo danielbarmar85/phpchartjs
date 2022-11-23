@@ -1,18 +1,18 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Options;
+namespace Nutsy\PHPChartJS\Options;
 
-use Halfpastfour\PHPChartJS\ArraySerializableInterface;
-use Halfpastfour\PHPChartJS\Delegate\ArraySerializable;
-use Halfpastfour\PHPChartJS\Options\Scales\GridLines;
-use Halfpastfour\PHPChartJS\Options\Scales\ScaleLabel;
-use Halfpastfour\PHPChartJS\Options\Scales\Ticks;
+use Nutsy\PHPChartJS\ArraySerializableInterface;
+use Nutsy\PHPChartJS\Delegate\ArraySerializable;
+use Nutsy\PHPChartJS\Options\Scales\GridLines;
+use Nutsy\PHPChartJS\Options\Scales\ScaleLabel;
+use Nutsy\PHPChartJS\Options\Scales\Ticks;
 use JsonSerializable;
 
 /**
  * Class Scale
  *
- * @package Halfpastfour\PHPChartJS\Options
+ * @package Nutsy\PHPChartJS\Options
  */
 abstract class Scale implements ArraySerializableInterface, JsonSerializable
 {

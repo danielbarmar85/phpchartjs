@@ -1,14 +1,14 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Chart;
+namespace Nutsy\PHPChartJS\Chart;
 
-use Halfpastfour\PHPChartJS\Chart;
-use Halfpastfour\PHPChartJS\DataSet\BarDataSet;
-use Halfpastfour\PHPChartJS\Options\BarOptions;
+use Nutsy\PHPChartJS\Chart;
+use Nutsy\PHPChartJS\DataSet\BarDataSet;
+use Nutsy\PHPChartJS\Options\BarOptions;
 
 /**
  * Class Bar
- * @package Halfpastfour\PHPChartJS\Chart
+ * @package Nutsy\PHPChartJS\Chart
  *
  * @method BarDataSet createDataSet
  * @method BarOptions options

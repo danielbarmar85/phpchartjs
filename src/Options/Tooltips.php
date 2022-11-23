@@ -1,17 +1,17 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Options;
+namespace Nutsy\PHPChartJS\Options;
 
-use Halfpastfour\PHPChartJS\ArraySerializableInterface;
-use Halfpastfour\PHPChartJS\Delegate\ArraySerializable;
-use Halfpastfour\PHPChartJS\Options\Tooltips\Callbacks;
+use Nutsy\PHPChartJS\ArraySerializableInterface;
+use Nutsy\PHPChartJS\Delegate\ArraySerializable;
+use Nutsy\PHPChartJS\Options\Tooltips\Callbacks;
 use JsonSerializable;
 use Laminas\Json\Expr;
 
 /**
  * Class Tooltips
  *
- * @package Halfpastfour\PHPChartJS\Options
+ * @package Nutsy\PHPChartJS\Options
  */
 class Tooltips implements ArraySerializableInterface, JsonSerializable
 {

@@ -2,39 +2,47 @@
 
 namespace Test;
 
-use Halfpastfour\PHPChartJS\LabelsCollection;
-use PHPUnit_Framework_TestCase;
+use Nutsy\PHPChartJS\LabelsCollection;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class LabelsCollectionTest
  *
  * @package Test
  */
-class LabelsCollectionTest extends PHPUnit_Framework_TestCase
+class LabelsCollectionTest extends TestCase
 {
+
     /**
-     * @var  LabelsCollection
+     * @var LabelsCollection
      */
     private $labelsCollectionEmpty;
 
     /**
-     * @var  LabelsCollection
+     * @var LabelsCollection
      */
     private $labelsCollection;
 
     /**
      * @var array
      */
-    private $labelsArray = ['startingLabel', 'label1', 'label2', 'endLabel'];
+    private $labelsArray = [
+        'startingLabel',
+        'label1',
+        'label2',
+        'endLabel',
+    ];
+
 
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->labelsCollectionEmpty = new LabelsCollection();
         $this->labelsCollection      = new LabelsCollection($this->labelsArray);
     }
+
 
     /**
      *
@@ -46,6 +54,7 @@ class LabelsCollectionTest extends PHPUnit_Framework_TestCase
         self::assertSame($expected, $result);
     }
 
+
     /**
      *
      */
@@ -55,4 +64,6 @@ class LabelsCollectionTest extends PHPUnit_Framework_TestCase
         $result   = $this->labelsCollection->jsonSerialize();
         self::assertSame($expected, $result);
     }
+
+
 }

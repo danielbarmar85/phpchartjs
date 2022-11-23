@@ -2,27 +2,31 @@
 
 namespace Test\Options\Layout;
 
-use Halfpastfour\PHPChartJS\Options\Layout\Padding;
-use PHPUnit_Framework_TestCase;
+use Nutsy\PHPChartJS\Options\Layout\Padding;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class PaddingTest
+ *
  * @package Test\Options\Layout
  */
-class PaddingTest extends PHPUnit_Framework_TestCase
+class PaddingTest extends TestCase
 {
+
     /**
      * @var Padding
      */
     protected $padding;
 
+
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->padding = new Padding();
     }
+
 
     /**
      *
@@ -34,6 +38,7 @@ class PaddingTest extends PHPUnit_Framework_TestCase
         $this->assertSame(20, $this->padding->getBottom());
     }
 
+
     /**
      *
      */
@@ -43,6 +48,7 @@ class PaddingTest extends PHPUnit_Framework_TestCase
         $this->padding->setLeft(20);
         $this->assertSame(20, $this->padding->getLeft());
     }
+
 
     /**
      *
@@ -54,6 +60,7 @@ class PaddingTest extends PHPUnit_Framework_TestCase
         $this->assertSame(20, $this->padding->getRight());
     }
 
+
     /**
      *
      */
@@ -64,6 +71,7 @@ class PaddingTest extends PHPUnit_Framework_TestCase
         $this->assertSame(20, $this->padding->getTop());
     }
 
+
     /**
      *
      */
@@ -71,6 +79,8 @@ class PaddingTest extends PHPUnit_Framework_TestCase
     {
         $this->padding->setTop(20);
         $result = $this->padding->jsonSerialize();
-        self::assertArraySubset(['top' => 20], $result);
+        $this->assertEquals(20, $result['top']);
     }
+
+
 }

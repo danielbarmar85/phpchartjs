@@ -1,18 +1,18 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Options;
+namespace Nutsy\PHPChartJS\Options;
 
-use Halfpastfour\PHPChartJS\ArraySerializableInterface;
-use Halfpastfour\PHPChartJS\Delegate\ArraySerializable;
-use Halfpastfour\PHPChartJS\Options\Scales\XAxis;
-use Halfpastfour\PHPChartJS\Options\Scales\XAxisCollection;
-use Halfpastfour\PHPChartJS\Options\Scales\YAxis;
-use Halfpastfour\PHPChartJS\Options\Scales\YAxisCollection;
+use Nutsy\PHPChartJS\ArraySerializableInterface;
+use Nutsy\PHPChartJS\Delegate\ArraySerializable;
+use Nutsy\PHPChartJS\Options\Scales\XAxis;
+use Nutsy\PHPChartJS\Options\Scales\XAxisCollection;
+use Nutsy\PHPChartJS\Options\Scales\YAxis;
+use Nutsy\PHPChartJS\Options\Scales\YAxisCollection;
 use JsonSerializable;
 
 /**
  * Class Scales
- * @package Halfpastfour\PHPChartJS\Options
+ * @package Nutsy\PHPChartJS\Options
  */
 class Scales implements ArraySerializableInterface, JsonSerializable
 {

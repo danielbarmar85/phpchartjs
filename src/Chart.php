@@ -1,13 +1,13 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS;
+namespace Nutsy\PHPChartJS;
 
-use Halfpastfour\PHPChartJS\Renderer\Html;
+use Nutsy\PHPChartJS\Renderer\Html;
 
 /**
  * Class Chart
  *
- * @package Halfpastfour\PHPChartJS
+ * @package Nutsy\PHPChartJS
  */
 abstract class Chart implements ChartInterface
 {
@@ -30,12 +30,12 @@ abstract class Chart implements ChartInterface
     protected $id;
 
     /**
-     * @var int
+     * @var integer
      */
     protected $height;
 
     /**
-     * @var int
+     * @var integer
      */
     protected $width;
 
@@ -48,6 +48,11 @@ abstract class Chart implements ChartInterface
      * @var LabelsCollection
      */
     protected $labels;
+
+    /**
+     * @var PluginsCollection
+     */
+    protected $plugins;
 
     /**
      * @var Options
@@ -83,16 +88,18 @@ abstract class Chart implements ChartInterface
         return $this;
     }
 
+
     /**
-     * @return int
+     * @return integer
      */
     public function getHeight()
     {
         return $this->height;
     }
 
+
     /**
-     * @param int $height
+     * @param integer $height
      *
      * @return Chart
      */
@@ -103,16 +110,18 @@ abstract class Chart implements ChartInterface
         return $this;
     }
 
+
     /**
-     * @return int
+     * @return integer
      */
     public function getWidth()
     {
         return $this->width;
     }
 
+
     /**
-     * @param int $width
+     * @param integer $width
      *
      * @return Chart
      */
@@ -123,6 +132,7 @@ abstract class Chart implements ChartInterface
         return $this;
     }
 
+
     /**
      * @return string
      */
@@ -130,6 +140,7 @@ abstract class Chart implements ChartInterface
     {
         return $this->title;
     }
+
 
     /**
      * @param string $title
@@ -143,6 +154,7 @@ abstract class Chart implements ChartInterface
         return $this;
     }
 
+
     /**
      * @return LabelsCollection
      */
@@ -154,6 +166,7 @@ abstract class Chart implements ChartInterface
 
         return $this->labels;
     }
+
 
     /**
      * @param string $label
@@ -167,15 +180,53 @@ abstract class Chart implements ChartInterface
         return $this;
     }
 
+
     /**
      * @param $offset
      *
-     * @return string|bool
+     * @return string|boolean
      */
     public function getLabel($offset)
     {
         return $this->labels()->offsetGet($offset);
     }
+
+    /**
+     * @return PluginsCollection
+     */
+    public function plugins()
+    {
+        if (is_null($this->plugins)) {
+            $this->plugins = new PluginsCollection();
+        }
+
+        return $this->plugins;
+    }
+
+
+    /**
+     * @param string $plugin
+     *
+     * @return $this
+     */
+    public function addPlugin($plugin)
+    {
+        $this->plugins()->append($plugin);
+
+        return $this;
+    }
+
+
+    /**
+     * @param $offset
+     *
+     * @return string|boolean
+     */
+    public function getPlugin($offset)
+    {
+        return $this->plugins()->offsetGet($offset);
+    }
+
 
     /**
      * @return DataSetCollection
@@ -189,6 +240,7 @@ abstract class Chart implements ChartInterface
         return $this->dataSets;
     }
 
+
     /**
      * @param DataSet $dataSet
      *
@@ -201,27 +253,30 @@ abstract class Chart implements ChartInterface
         return $this;
     }
 
+
     /**
      * @param $offset
      *
-     * @return DataSet|bool
+     * @return DataSet|boolean
      */
     public function getDataSet($offset)
     {
         return $this->dataSets()->offsetGet($offset);
     }
 
+
     /**
-     * @param bool $pretty
+     * @param boolean $pretty
      *
      * @return string
      */
-    public function render($pretty = false)
+    public function render($pretty=false)
     {
         $renderer = new Html($this);
 
         return $renderer->render($pretty ? $renderer::RENDER_PRETTY : null);
     }
+
 
     /**
      * @return DataSet
@@ -229,12 +284,15 @@ abstract class Chart implements ChartInterface
     public function createDataSet()
     {
         $datasetClass = static::MODEL['dataset'];
-        /** @var \Halfpastfour\PHPChartJS\DataSet $dataSet */
+        /*
+            @var \Nutsy\PHPChartJS\DataSet $dataSet
+        */
         $dataSet = new $datasetClass();
         $dataSet->setOwner($this);
 
         return $dataSet;
     }
+
 
     /**
      * @return Options
@@ -249,4 +307,6 @@ abstract class Chart implements ChartInterface
 
         return $this->options;
     }
+
+
 }

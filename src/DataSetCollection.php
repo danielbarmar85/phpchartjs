@@ -1,6 +1,6 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS;
+namespace Nutsy\PHPChartJS;
 
 use Halfpastfour\Collection\Collection\ArrayAccess;
 use JsonSerializable;
@@ -8,7 +8,7 @@ use JsonSerializable;
 /**
  * Class DataSetCollection
  *
- * @package Halfpastfour\PHPChartJS
+ * @package Nutsy\PHPChartJS
  */
 class DataSetCollection extends ArrayAccess implements JsonSerializable
 {

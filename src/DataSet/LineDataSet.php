@@ -1,12 +1,12 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\DataSet;
+namespace Nutsy\PHPChartJS\DataSet;
 
-use Halfpastfour\PHPChartJS\DataSet;
+use Nutsy\PHPChartJS\DataSet;
 
 /**
  * Class LineDataSet
- * @package Halfpastfour\PHPChartJS\DataSet
+ * @package Nutsy\PHPChartJS\DataSet
  */
 class LineDataSet extends DataSet
 {

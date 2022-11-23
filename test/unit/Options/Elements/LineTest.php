@@ -2,8 +2,8 @@
 
 namespace Test\Options\Elements;
 
-use Halfpastfour\PHPChartJS\Options\Elements\Line;
-use PHPUnit_Framework_TestCase;
+use Nutsy\PHPChartJS\Options\Elements\Line;
+use PHPUnit\Framework\TestCase;
 use Test\TestUtils;
 
 /**
@@ -11,7 +11,7 @@ use Test\TestUtils;
  *
  * @package Test\Options\Elements
  */
-class LineTest extends PHPUnit_Framework_TestCase
+class LineTest extends TestCase
 {
     /**
      * @var Line
@@ -72,7 +72,7 @@ class LineTest extends PHPUnit_Framework_TestCase
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->line = new Line();
     }

@@ -1,12 +1,12 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Options\Legend;
+namespace Nutsy\PHPChartJS\Options\Legend;
 
-use Halfpastfour\PHPChartJS\Options\Legend;
+use Nutsy\PHPChartJS\Options\Legend;
 
 /**
  * Class PieLegend
- * @package Halfpastfour\PHPChartJS\Options\Legend
+ * @package Nutsy\PHPChartJS\Options\Legend
  */
 class PieLegend extends Legend
 {

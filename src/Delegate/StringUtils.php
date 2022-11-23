@@ -1,11 +1,11 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Delegate;
+namespace Nutsy\PHPChartJS\Delegate;
 
 /**
  * Trait StringUtils
  *
- * @package Halfpastfour\PHPChartJS\Delegate
+ * @package Nutsy\PHPChartJS\Delegate
  */
 trait StringUtils
 {

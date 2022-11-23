@@ -1,14 +1,14 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Options\Layout;
+namespace Nutsy\PHPChartJS\Options\Layout;
 
-use Halfpastfour\PHPChartJS\ArraySerializableInterface;
-use Halfpastfour\PHPChartJS\Delegate\ArraySerializable;
+use Nutsy\PHPChartJS\ArraySerializableInterface;
+use Nutsy\PHPChartJS\Delegate\ArraySerializable;
 use JsonSerializable;
 
 /**
  * Class Padding
- * @package Halfpastfour\PHPChartJS\Options\Layout
+ * @package Nutsy\PHPChartJS\Options\Layout
  */
 class Padding implements ArraySerializableInterface, JsonSerializable
 {

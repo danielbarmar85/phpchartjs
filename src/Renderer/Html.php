@@ -1,13 +1,13 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Renderer;
+namespace Nutsy\PHPChartJS\Renderer;
 
 use DOMDocument;
 
 /**
  * Class Renderer
  *
- * @package Halfpastfour\PHPChartJS
+ * @package Nutsy\PHPChartJS
  */
 class Html extends Renderer
 {

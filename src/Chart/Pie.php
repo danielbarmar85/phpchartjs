@@ -1,15 +1,15 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Chart;
+namespace Nutsy\PHPChartJS\Chart;
 
-use Halfpastfour\PHPChartJS\Chart;
-use Halfpastfour\PHPChartJS\ChartInterface;
-use Halfpastfour\PHPChartJS\DataSet\PieDataSet;
-use Halfpastfour\PHPChartJS\Options\PieOptions;
+use Nutsy\PHPChartJS\Chart;
+use Nutsy\PHPChartJS\ChartInterface;
+use Nutsy\PHPChartJS\DataSet\PieDataSet;
+use Nutsy\PHPChartJS\Options\PieOptions;
 
 /**
  * Class Pie
- * @package Halfpastfour\PHPChartJS\Chart
+ * @package Nutsy\PHPChartJS\Chart
  *
  * @method PieDataSet createDataSet
  * @method PieOptions options

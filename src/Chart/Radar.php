@@ -1,15 +1,15 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Chart;
+namespace Nutsy\PHPChartJS\Chart;
 
-use Halfpastfour\PHPChartJS\Chart;
-use Halfpastfour\PHPChartJS\ChartInterface;
-use Halfpastfour\PHPChartJS\DataSet\RadarDataSet;
-use Halfpastfour\PHPChartJS\Options\RadarOptions;
+use Nutsy\PHPChartJS\Chart;
+use Nutsy\PHPChartJS\ChartInterface;
+use Nutsy\PHPChartJS\DataSet\RadarDataSet;
+use Nutsy\PHPChartJS\Options\RadarOptions;
 
 /**
  * Class Radar
- * @package Halfpastfour\PHPChartJS\Chart
+ * @package Nutsy\PHPChartJS\Chart
  *
  * @method RadarDataSet createDataSet
  * @method RadarOptions options

@@ -2,8 +2,8 @@
 
 namespace Test\Options\Scales;
 
-use Halfpastfour\PHPChartJS\Options\Scales\Ticks;
-use PHPUnit_Framework_TestCase;
+use Nutsy\PHPChartJS\Options\Scales\Ticks;
+use PHPUnit\Framework\TestCase;
 use Test\TestUtils;
 
 /**
@@ -11,7 +11,7 @@ use Test\TestUtils;
  *
  * @package Test\Options\Scales
  */
-class TicksTest extends PHPUnit_Framework_TestCase
+class TicksTest extends TestCase
 {
     /**
      * @var Ticks
@@ -113,7 +113,7 @@ class TicksTest extends PHPUnit_Framework_TestCase
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->ticks = new Ticks();
     }

@@ -2,8 +2,8 @@
 
 namespace Test\Options\Scales;
 
-use Halfpastfour\PHPChartJS\Options\Scales\ScaleLabel;
-use PHPUnit_Framework_TestCase;
+use Nutsy\PHPChartJS\Options\Scales\ScaleLabel;
+use PHPUnit\Framework\TestCase;
 use Test\TestUtils;
 
 /**
@@ -11,7 +11,7 @@ use Test\TestUtils;
  *
  * @package Test\Options\Scales
  */
-class ScaleLabelTest extends PHPUnit_Framework_TestCase
+class ScaleLabelTest extends TestCase
 {
     /**
      * @var ScaleLabel
@@ -57,7 +57,7 @@ class ScaleLabelTest extends PHPUnit_Framework_TestCase
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->scaleLabel = new ScaleLabel();
     }

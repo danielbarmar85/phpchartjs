@@ -1,16 +1,16 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Options\Tooltips;
+namespace Nutsy\PHPChartJS\Options\Tooltips;
 
-use Halfpastfour\PHPChartJS\ArraySerializableInterface;
-use Halfpastfour\PHPChartJS\Delegate\ArraySerializable;
+use Nutsy\PHPChartJS\ArraySerializableInterface;
+use Nutsy\PHPChartJS\Delegate\ArraySerializable;
 use JsonSerializable;
 use Laminas\Json\Expr;
 
 /**
  * Class Callbacks
  *
- * @package Halfpastfour\PHPChartJS\Tooltips
+ * @package Nutsy\PHPChartJS\Tooltips
  */
 class Callbacks implements ArraySerializableInterface, JsonSerializable
 {

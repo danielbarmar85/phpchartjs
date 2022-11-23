@@ -3,21 +3,21 @@
 namespace Test;
 
 use Halfpastfour\Collection\Collection\ArrayAccess;
-use Halfpastfour\PHPChartJS\ArraySerializableInterface;
-use Halfpastfour\PHPChartJS\Chart\Bar;
-use Halfpastfour\PHPChartJS\ChartInterface;
-use Halfpastfour\PHPChartJS\ChartOwnedInterface;
-use Halfpastfour\PHPChartJS\Collection\Data;
-use Halfpastfour\PHPChartJS\DataSet;
+use Nutsy\PHPChartJS\ArraySerializableInterface;
+use Nutsy\PHPChartJS\Chart\Bar;
+use Nutsy\PHPChartJS\ChartInterface;
+use Nutsy\PHPChartJS\ChartOwnedInterface;
+use Nutsy\PHPChartJS\Collection\Data;
+use Nutsy\PHPChartJS\DataSet;
 use JsonSerializable;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class DataSetTest
  *
  * @package Test
  */
-class DataSetTest extends PHPUnit_Framework_TestCase
+class DataSetTest extends \PHPUnit\Framework\TestCase
 {
     /**
      *
@@ -204,25 +204,14 @@ class DataSetTest extends PHPUnit_Framework_TestCase
 
         $this->assertInstanceOf(DataSet::class, $dataSet->setXAxisID('myXAxis'));
         $this->assertEquals('myXAxis', $dataSet->getXAxisID(), 'The correct value is returned');
-        $this->assertArraySubset(['xAxisID' => 'myXAxis'], $dataSet->getArrayCopy());
-        $this->assertArraySubset(
-            ['xAxisID' => 'myXAxis'],
-            $dataSet->jsonSerialize(),
-            'Serialized data is not correct'
-        );
+        $this->assertEquals('myXAxis', $dataSet->getArrayCopy()['xAxisID'], 'getArrayCopy is failing');
+        $this->assertEquals('myXAxis', $dataSet->jsonSerialize()['xAxisID'], 'Serialized data is not correct');
 
         $this->assertNull($dataSet->getYAxisID(), 'The yAxisID value is not set');
 
         $this->assertInstanceOf(DataSet::class, $dataSet->setYAxisID('myYAxis'));
         $this->assertEquals('myYAxis', $dataSet->getYAxisID(), 'The correct value is not returned');
-        $this->assertArraySubset(
-            [
-                'xAxisID' => 'myXAxis',
-                'yAxisID' => 'myYAxis',
-            ],
-            $dataSet->jsonSerialize(),
-            'The serialized data is not correct'
-        );
+        $this->assertEquals('myXAxis', $dataSet->jsonSerialize()['xAxisID'], 'Serialized data is not correct');
     }
 
     /**

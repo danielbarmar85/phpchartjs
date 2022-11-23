@@ -1,10 +1,10 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\ConfigDefaults;
+namespace Nutsy\PHPChartJS\ConfigDefaults;
 
 /**
  * Class GlobalConfig
- * @package Halfpastfour\PHPChartJS\ConfigDefaults
+ * @package Nutsy\PHPChartJS\ConfigDefaults
  */
 class GlobalConfig
 {

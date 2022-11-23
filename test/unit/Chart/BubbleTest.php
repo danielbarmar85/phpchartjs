@@ -2,16 +2,16 @@
 
 namespace Test\Chart;
 
-use Halfpastfour\PHPChartJS\Chart\Bubble;
-use Halfpastfour\PHPChartJS\ChartInterface;
-use Halfpastfour\PHPChartJS\DataSet\BubbleDataSet;
-use Halfpastfour\PHPChartJS\Options\BubbleOptions;
+use Nutsy\PHPChartJS\Chart\Bubble;
+use Nutsy\PHPChartJS\ChartInterface;
+use Nutsy\PHPChartJS\DataSet\BubbleDataSet;
+use Nutsy\PHPChartJS\Options\BubbleOptions;
 
 /**
  * Class BubbleTest
  * @package Test\Chart
  */
-class BubbleTest extends \PHPUnit_Framework_TestCase
+class BubbleTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Test the factory for creating a Bubble chart

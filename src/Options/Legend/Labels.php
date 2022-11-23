@@ -1,16 +1,16 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Options\Legend;
+namespace Nutsy\PHPChartJS\Options\Legend;
 
-use Halfpastfour\PHPChartJS\ArraySerializableInterface;
-use Halfpastfour\PHPChartJS\Delegate\ArraySerializable;
+use Nutsy\PHPChartJS\ArraySerializableInterface;
+use Nutsy\PHPChartJS\Delegate\ArraySerializable;
 use JsonSerializable;
 use Laminas\Json\Expr;
 
 /**
  * Class PieLegend
  *
- * @package Halfpastfour\PHPChartJS\Options\Legend
+ * @package Nutsy\PHPChartJS\Options\Legend
  */
 class Labels implements ArraySerializableInterface, JsonSerializable
 {

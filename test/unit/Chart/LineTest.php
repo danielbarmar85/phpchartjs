@@ -2,16 +2,16 @@
 
 namespace Test\Chart;
 
-use Halfpastfour\PHPChartJS\Chart\Line;
-use Halfpastfour\PHPChartJS\ChartInterface;
-use Halfpastfour\PHPChartJS\DataSet\LineDataSet;
-use Halfpastfour\PHPChartJS\Options\LineOptions;
+use Nutsy\PHPChartJS\Chart\Line;
+use Nutsy\PHPChartJS\ChartInterface;
+use Nutsy\PHPChartJS\DataSet\LineDataSet;
+use Nutsy\PHPChartJS\Options\LineOptions;
 
 /**
  * Class LineTest
  * @package Test\Chart
  */
-class LineTest extends \PHPUnit_Framework_TestCase
+class LineTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Test the factory for creating a Line chart

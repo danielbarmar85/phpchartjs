@@ -1,10 +1,10 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS;
+namespace Nutsy\PHPChartJS;
 
 /**
  * Class DataSet
- * @package Halfpastfour\PHPChartJS
+ * @package Nutsy\PHPChartJS
  */
 interface ChartOwnedInterface
 {

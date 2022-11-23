@@ -2,22 +2,22 @@
 
 namespace Test;
 
-use Halfpastfour\PHPChartJS\Chart\Bar;
-use Halfpastfour\PHPChartJS\Chart\Bubble;
-use Halfpastfour\PHPChartJS\Chart\Doughnut;
-use Halfpastfour\PHPChartJS\Chart\HorizontalBar;
-use Halfpastfour\PHPChartJS\Chart\Line;
-use Halfpastfour\PHPChartJS\Chart\Pie;
-use Halfpastfour\PHPChartJS\Chart\PolarArea;
-use Halfpastfour\PHPChartJS\Chart\Radar;
-use Halfpastfour\PHPChartJS\ChartInterface;
-use Halfpastfour\PHPChartJS\Factory;
+use Nutsy\PHPChartJS\Chart\Bar;
+use Nutsy\PHPChartJS\Chart\Bubble;
+use Nutsy\PHPChartJS\Chart\Doughnut;
+use Nutsy\PHPChartJS\Chart\HorizontalBar;
+use Nutsy\PHPChartJS\Chart\Line;
+use Nutsy\PHPChartJS\Chart\Pie;
+use Nutsy\PHPChartJS\Chart\PolarArea;
+use Nutsy\PHPChartJS\Chart\Radar;
+use Nutsy\PHPChartJS\ChartInterface;
+use Nutsy\PHPChartJS\Factory;
 
 /**
  * Class FactoryTest
  * @package Test
  */
-class FactoryTest extends \PHPUnit_Framework_TestCase
+class FactoryTest extends \PHPUnit\Framework\TestCase
 {
     /**
      *

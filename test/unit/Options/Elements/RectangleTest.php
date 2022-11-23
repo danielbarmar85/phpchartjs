@@ -2,8 +2,8 @@
 
 namespace Test\Options\Elements;
 
-use Halfpastfour\PHPChartJS\Options\Elements\Rectangle;
-use PHPUnit_Framework_TestCase;
+use Nutsy\PHPChartJS\Options\Elements\Rectangle;
+use PHPUnit\Framework\TestCase;
 use Test\TestUtils;
 
 /**
@@ -11,7 +11,7 @@ use Test\TestUtils;
  *
  * @package Test\Options\Elements
  */
-class RectangleTest extends PHPUnit_Framework_TestCase
+class RectangleTest extends TestCase
 {
     /**
      * @var Rectangle
@@ -51,7 +51,7 @@ class RectangleTest extends PHPUnit_Framework_TestCase
     /**
      *
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->rectangle = new Rectangle();
     }

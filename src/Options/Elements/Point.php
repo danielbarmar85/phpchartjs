@@ -1,15 +1,15 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\Options\Elements;
+namespace Nutsy\PHPChartJS\Options\Elements;
 
-use Halfpastfour\PHPChartJS\ArraySerializableInterface;
-use Halfpastfour\PHPChartJS\Delegate\ArraySerializable;
+use Nutsy\PHPChartJS\ArraySerializableInterface;
+use Nutsy\PHPChartJS\Delegate\ArraySerializable;
 use JsonSerializable;
 
 /**
  * Class Point
  *
- * @package Halfpastfour\PHPChartJS\Options\Elements
+ * @package Nutsy\PHPChartJS\Options\Elements
  */
 class Point implements ArraySerializableInterface, JsonSerializable
 {

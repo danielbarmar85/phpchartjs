@@ -2,16 +2,16 @@
 
 namespace Test\Chart;
 
-use Halfpastfour\PHPChartJS\Chart\Bar;
-use Halfpastfour\PHPChartJS\ChartInterface;
-use Halfpastfour\PHPChartJS\DataSet\BarDataSet;
-use Halfpastfour\PHPChartJS\Options\BarOptions;
+use Nutsy\PHPChartJS\Chart\Bar;
+use Nutsy\PHPChartJS\ChartInterface;
+use Nutsy\PHPChartJS\DataSet\BarDataSet;
+use Nutsy\PHPChartJS\Options\BarOptions;
 
 /**
  * Class BarTest
  * @package Test\Chart
  */
-class BarTest extends \PHPUnit_Framework_TestCase
+class BarTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Test the factory for creating a Bar chart

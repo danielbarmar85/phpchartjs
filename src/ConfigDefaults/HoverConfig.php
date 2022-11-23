@@ -1,6 +1,6 @@
 <?php
 
-namespace Halfpastfour\PHPChartJS\ConfigDefaults;
+namespace Nutsy\PHPChartJS\ConfigDefaults;
 
 class HoverConfig
 {
