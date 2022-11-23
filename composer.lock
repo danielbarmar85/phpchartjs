@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9cf83a9614bc226a933a1e9ec7c299e3",
+    "content-hash": "7b4943f1b24f426de0dd965e616bf88f",
     "packages": [
         {
             "name": "halfpastfouram/collection",
@@ -3901,7 +3901,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.0.0",
+        "php": ">=7.2",
         "ext-dom": "*",
         "ext-json": "*"
     },
