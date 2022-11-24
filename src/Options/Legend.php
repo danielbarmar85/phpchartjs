@@ -18,7 +18,7 @@ class Legend implements ArraySerializableInterface, JsonSerializable
     use ArraySerializable;
 
     /**
-     * @var bool
+     * @var boolean
      */
     private $display;
 
@@ -28,7 +28,7 @@ class Legend implements ArraySerializableInterface, JsonSerializable
     private $position;
 
     /**
-     * @var bool
+     * @var boolean
      */
     private $fullWidth;
 
@@ -48,20 +48,29 @@ class Legend implements ArraySerializableInterface, JsonSerializable
     private $labels;
 
     /**
-     * @var bool
+     * @var boolean
      */
     private $reverse;
 
     /**
-     * @return bool
+     * Align.
+     *
+     * @var string
+     */
+    protected string $align;
+
+
+    /**
+     * @return boolean
      */
     public function isDisplay()
     {
         return $this->display;
     }
 
+
     /**
-     * @param bool $display
+     * @param boolean $display
      *
      * @return $this
      */
@@ -72,6 +81,7 @@ class Legend implements ArraySerializableInterface, JsonSerializable
         return $this;
     }
 
+
     /**
      * @return string
      */
@@ -79,6 +89,7 @@ class Legend implements ArraySerializableInterface, JsonSerializable
     {
         return $this->position;
     }
+
 
     /**
      * @param string $position
@@ -92,16 +103,18 @@ class Legend implements ArraySerializableInterface, JsonSerializable
         return $this;
     }
 
+
     /**
-     * @return bool
+     * @return boolean
      */
     public function isFullWidth()
     {
         return $this->fullWidth;
     }
 
+
     /**
-     * @param bool $fullWidth
+     * @param boolean $fullWidth
      *
      * @return $this
      */
@@ -112,6 +125,7 @@ class Legend implements ArraySerializableInterface, JsonSerializable
         return $this;
     }
 
+
     /**
      * @return Expr
      */
@@ -119,6 +133,7 @@ class Legend implements ArraySerializableInterface, JsonSerializable
     {
         return $this->onClick;
     }
+
 
     /**
      * @param string $onClick
@@ -132,6 +147,7 @@ class Legend implements ArraySerializableInterface, JsonSerializable
         return $this;
     }
 
+
     /**
      * @return Expr
      */
@@ -139,6 +155,7 @@ class Legend implements ArraySerializableInterface, JsonSerializable
     {
         return $this->onHover;
     }
+
 
     /**
      * @param string $onHover
@@ -152,6 +169,7 @@ class Legend implements ArraySerializableInterface, JsonSerializable
         return $this;
     }
 
+
     /**
      * @return LabelsCollection
      */
@@ -164,16 +182,18 @@ class Legend implements ArraySerializableInterface, JsonSerializable
         return $this->labels;
     }
 
+
     /**
-     * @return bool
+     * @return boolean
      */
     public function isReverse()
     {
         return $this->reverse;
     }
 
+
     /**
-     * @param bool $reverse
+     * @param boolean $reverse
      *
      * @return $this
      */
@@ -184,6 +204,7 @@ class Legend implements ArraySerializableInterface, JsonSerializable
         return $this;
     }
 
+
     /**
      * @return array
      */
@@ -191,4 +212,32 @@ class Legend implements ArraySerializableInterface, JsonSerializable
     {
         return $this->getArrayCopy();
     }
+
+
+    /**
+     * Get align.
+     *
+     * @return string
+     */
+    public function getAlign()
+    {
+        return $this->align;
+    }
+
+
+    /**
+     * Set align.
+     *
+     * @param string $align Align.
+     *
+     * @return $this
+     */
+    public function setAlign(string $align)
+    {
+        $this->align = $align;
+
+        return $this;
+    }
+
+
 }

@@ -13,6 +13,7 @@ use Nutsy\PHPChartJS\Options\Title;
 use Nutsy\PHPChartJS\Options\Tooltips;
 use JsonSerializable;
 use Laminas\Json\Expr;
+use Nutsy\PHPChartJS\Options\Plugins;
 
 /**
  * Class Options
@@ -64,15 +65,33 @@ class Options implements ChartOwnedInterface, ArraySerializableInterface, JsonSe
      */
     protected $legend;
 
+     /**
+      * Plugins.
+      *
+      * @var Plugin
+      */
+    protected $plugins;
+
     /**
      * @var Tooltips
      */
     protected $tooltips;
 
     /**
-     * @var bool
+     * @var boolean
      */
     protected $maintainAspectRatio;
+
+    /**
+     * @var boolean
+     */
+    protected $responsive;
+
+    /**
+     * @var string
+     */
+    protected $indexAxis;
+
 
     /**
      * @return Layout
@@ -86,6 +105,7 @@ class Options implements ChartOwnedInterface, ArraySerializableInterface, JsonSe
         return $this->layout;
     }
 
+
     /**
      * @return Elements
      */
@@ -97,6 +117,7 @@ class Options implements ChartOwnedInterface, ArraySerializableInterface, JsonSe
 
         return $this->elements;
     }
+
 
     /**
      * @return Title
@@ -110,6 +131,7 @@ class Options implements ChartOwnedInterface, ArraySerializableInterface, JsonSe
         return $this->title;
     }
 
+
     /**
      * @return Hover
      */
@@ -122,6 +144,7 @@ class Options implements ChartOwnedInterface, ArraySerializableInterface, JsonSe
         return $this->hover;
     }
 
+
     /**
      * @return \Laminas\Json\Expr
      */
@@ -129,6 +152,7 @@ class Options implements ChartOwnedInterface, ArraySerializableInterface, JsonSe
     {
         return $this->onClick;
     }
+
 
     /**
      * @param string $onClick
@@ -142,6 +166,7 @@ class Options implements ChartOwnedInterface, ArraySerializableInterface, JsonSe
         return $this;
     }
 
+
     /**
      * @return Scales
      */
@@ -153,6 +178,7 @@ class Options implements ChartOwnedInterface, ArraySerializableInterface, JsonSe
 
         return $this->scales;
     }
+
 
     /**
      * @return Animation
@@ -166,6 +192,7 @@ class Options implements ChartOwnedInterface, ArraySerializableInterface, JsonSe
         return $this->animation;
     }
 
+
     /**
      * @return Legend
      */
@@ -177,6 +204,22 @@ class Options implements ChartOwnedInterface, ArraySerializableInterface, JsonSe
 
         return $this->legend;
     }
+
+
+    /**
+     * Get plugin.
+     *
+     * @return Plugin
+     */
+    public function getPlugins()
+    {
+        if ($this->plugins === null) {
+            $this->plugins = new Plugins();
+        }
+
+        return $this->plugins;
+    }
+
 
     /**
      * @return Tooltips
@@ -190,8 +233,35 @@ class Options implements ChartOwnedInterface, ArraySerializableInterface, JsonSe
         return $this->tooltips;
     }
 
+
     /**
-     * @return bool
+     * @return boolean
+     */
+    public function isResponsive()
+    {
+        if (is_null($this->responsive)) {
+            $this->responsive = true;
+        }
+
+        return $this->responsive;
+    }
+
+
+    /**
+     * @param boolean $flag
+     *
+     * @return $this
+     */
+    public function setResponsive($flag)
+    {
+        $this->responsive = boolval($flag);
+
+        return $this;
+    }
+
+
+    /**
+     * @return boolean
      */
     public function isMaintainAspectRatio()
     {
@@ -202,8 +272,9 @@ class Options implements ChartOwnedInterface, ArraySerializableInterface, JsonSe
         return $this->maintainAspectRatio;
     }
 
+
     /**
-     * @param bool $flag
+     * @param boolean $flag
      *
      * @return $this
      */
@@ -214,6 +285,33 @@ class Options implements ChartOwnedInterface, ArraySerializableInterface, JsonSe
         return $this;
     }
 
+
+    /**
+     * Get Index axis.
+     *
+     * @return string
+     */
+    public function getIndexAxis()
+    {
+        return $this->indexAxis;
+    }
+
+
+    /**
+     * Set Index Axis.
+     *
+     * @param string $indexAxis Index Axis.
+     *
+     * @return $this
+     */
+    public function setIndexAxis($indexAxis)
+    {
+        $this->indexAxis = $indexAxis;
+
+        return $this;
+    }
+
+
     /**
      * @return array
      */
@@ -221,4 +319,6 @@ class Options implements ChartOwnedInterface, ArraySerializableInterface, JsonSe
     {
         return $this->getArrayCopy();
     }
+
+
 }

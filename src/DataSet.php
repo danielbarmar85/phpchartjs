@@ -83,6 +83,11 @@ class DataSet implements ChartOwnedInterface, ArraySerializableInterface, JsonSe
     protected $hidden;
 
     /**
+     * @var string|null
+     */
+    protected $axis;
+
+    /**
      * @return string
      */
     public function getType()
@@ -130,6 +135,26 @@ class DataSet implements ChartOwnedInterface, ArraySerializableInterface, JsonSe
     public function setLabel($label)
     {
         $this->label = strval($label);
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAxis()
+    {
+        return $this->axis;
+    }
+
+    /**
+     * @param string $axis
+     *
+     * @return $this
+     */
+    public function setAxis($axis)
+    {
+        $this->axis = $axis;
 
         return $this;
     }
