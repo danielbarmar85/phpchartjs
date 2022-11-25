@@ -29,6 +29,20 @@ class Plugins implements ArraySerializableInterface, JsonSerializable
         return $this->legend;
     }
 
+    /**
+     * Return Title.
+     *
+     * @return Title
+     */
+    public function getTitle()
+    {
+        if (isset($this->title) === false) {
+            $this->title = new Title();
+        }
+
+        return $this->title;
+    }
+
 
     /**
      * Serialize.

@@ -60,9 +60,15 @@ abstract class Chart implements ChartInterface
     protected $options;
 
     /**
+     * @var Defaults
+     */
+    protected $defaults;
+
+    /**
      * @var DataSetCollection
      */
     protected $dataSets;
+
 
     /**
      * @return string
@@ -75,6 +81,7 @@ abstract class Chart implements ChartInterface
 
         return $this->id;
     }
+
 
     /**
      * @param string $id
@@ -191,6 +198,7 @@ abstract class Chart implements ChartInterface
         return $this->labels()->offsetGet($offset);
     }
 
+
     /**
      * @return PluginsCollection
      */
@@ -306,6 +314,19 @@ abstract class Chart implements ChartInterface
         }
 
         return $this->options;
+    }
+
+
+    /**
+     * @return Defaults
+     */
+    public function defaults()
+    {
+        if (is_null($this->defaults)) {
+            $this->defaults = new Defaults($this);
+        }
+
+        return $this->defaults;
     }
 
 

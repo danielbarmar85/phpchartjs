@@ -16,7 +16,7 @@ class Title implements ArraySerializableInterface, JsonSerializable
     use ArraySerializable;
 
     /**
-     * @var bool
+     * @var boolean
      */
     private $display;
 
@@ -26,32 +26,12 @@ class Title implements ArraySerializableInterface, JsonSerializable
     private $position;
 
     /**
-     * @var bool
+     * @var boolean
      */
     private $fullWidth;
 
     /**
-     * @var int
-     */
-    private $fontSize;
-
-    /**
-     * @var string
-     */
-    private $fontFamily;
-
-    /**
-     * @var string
-     */
-    private $fontColor;
-
-    /**
-     * @var string
-     */
-    private $fontStyle;
-
-    /**
-     * @var int
+     * @var integer
      */
     private $padding;
 
@@ -61,15 +41,22 @@ class Title implements ArraySerializableInterface, JsonSerializable
     private $text;
 
     /**
-     * @return bool
+     * @var Fonts
+     */
+    private $font;
+
+
+    /**
+     * @return boolean
      */
     public function isDisplay()
     {
         return $this->display;
     }
 
+
     /**
-     * @param bool $display
+     * @param boolean $display
      *
      * @return $this
      */
@@ -80,6 +67,7 @@ class Title implements ArraySerializableInterface, JsonSerializable
         return $this;
     }
 
+
     /**
      * @return string
      */
@@ -87,6 +75,7 @@ class Title implements ArraySerializableInterface, JsonSerializable
     {
         return $this->position;
     }
+
 
     /**
      * @param string $position
@@ -100,16 +89,18 @@ class Title implements ArraySerializableInterface, JsonSerializable
         return $this;
     }
 
+
     /**
-     * @return bool
+     * @return boolean
      */
     public function isFullWidth()
     {
         return $this->fullWidth;
     }
 
+
     /**
-     * @param bool $fullWidth
+     * @param boolean $fullWidth
      *
      * @return $this
      */
@@ -120,96 +111,18 @@ class Title implements ArraySerializableInterface, JsonSerializable
         return $this;
     }
 
-    /**
-     * @return int
-     */
-    public function getFontSize()
-    {
-        return $this->fontSize;
-    }
 
     /**
-     * @param int $fontSize
-     *
-     * @return $this
-     */
-    public function setFontSize($fontSize)
-    {
-        $this->fontSize = intval($fontSize);
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getFontFamily()
-    {
-        return $this->fontFamily;
-    }
-
-    /**
-     * @param string $fontFamily
-     *
-     * @return $this
-     */
-    public function setFontFamily($fontFamily)
-    {
-        $this->fontFamily = strval($fontFamily);
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getFontColor()
-    {
-        return $this->fontColor;
-    }
-
-    /**
-     * @param string $fontColor
-     *
-     * @return $this
-     */
-    public function setFontColor($fontColor)
-    {
-        $this->fontColor = strval($fontColor);
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getFontStyle()
-    {
-        return $this->fontStyle;
-    }
-
-    /**
-     * @param string $fontStyle
-     *
-     * @return $this
-     */
-    public function setFontStyle($fontStyle)
-    {
-        $this->fontStyle = strval($fontStyle);
-
-        return $this;
-    }
-
-    /**
-     * @return int
+     * @return integer
      */
     public function getPadding()
     {
         return $this->padding;
     }
 
+
     /**
-     * @param int $padding
+     * @param integer $padding
      *
      * @return $this
      */
@@ -220,6 +133,7 @@ class Title implements ArraySerializableInterface, JsonSerializable
         return $this;
     }
 
+
     /**
      * @return string
      */
@@ -227,6 +141,7 @@ class Title implements ArraySerializableInterface, JsonSerializable
     {
         return $this->text;
     }
+
 
     /**
      * @param string $text
@@ -240,6 +155,22 @@ class Title implements ArraySerializableInterface, JsonSerializable
         return $this;
     }
 
+
+    /**
+     * Return Font.
+     *
+     * @return Font
+     */
+    public function getFonts()
+    {
+        if (isset($this->font) === false) {
+            $this->font = new Fonts();
+        }
+
+        return $this->font;
+    }
+
+
     /**
      * @return array
      */
@@ -247,4 +178,6 @@ class Title implements ArraySerializableInterface, JsonSerializable
     {
         return $this->getArrayCopy();
     }
+
+
 }

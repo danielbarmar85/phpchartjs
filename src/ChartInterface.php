@@ -16,6 +16,11 @@ interface ChartInterface
     public function options();
 
     /**
+     * @return Defaults
+     */
+    public function defaults();
+
+    /**
      * @return DataSet
      */
     public function createDataSet();

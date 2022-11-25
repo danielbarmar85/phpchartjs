@@ -40,6 +40,11 @@ class Json extends Renderer
             $config['options'] = $options;
         }
 
+        $defaults = $this->chart->defaults()->jsonSerialize();
+        if (! empty($defaults)) {
+            $config['defaults'] = $defaults;
+        }
+
         $output = JsonHelper::encode($config, false, ['enableJsonExprFinder' => true]);
         if ($flags & Renderer::RENDER_PRETTY) {
             $output = JsonHelper::prettyPrint($output);
