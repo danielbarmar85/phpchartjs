@@ -5,6 +5,7 @@ namespace Nutsy\PHPChartJS;
 use JsonSerializable;
 use Nutsy\PHPChartJS\Delegate\ArraySerializable;
 use Nutsy\PHPChartJS\Options\Fonts;
+use Nutsy\PHPChartJS\Options\WaterMark;
 
 /**
  * Class Defaults
@@ -35,6 +36,21 @@ class Defaults implements ChartOwnedInterface, ArraySerializableInterface, JsonS
         }
 
         return $this->font;
+    }
+
+
+    /**
+     * Return Watermark.
+     *
+     * @return Watermark
+     */
+    public function getWatermark()
+    {
+        if (isset($this->watermark) === false) {
+            $this->watermark = new WaterMark();
+        }
+
+        return $this->watermark;
     }
 
 

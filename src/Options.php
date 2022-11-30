@@ -194,6 +194,17 @@ class Options implements ChartOwnedInterface, ArraySerializableInterface, JsonSe
 
 
     /**
+     * @return bool
+     */
+    public function disableAnimation()
+    {
+        $this->animation = false;
+
+        return $this->animation;
+    }
+
+
+    /**
      * @return Legend
      */
     public function getLegend()
