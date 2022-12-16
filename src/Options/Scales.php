@@ -21,17 +21,17 @@ class Scales implements ArraySerializableInterface, JsonSerializable
     /**
      * @var XAxisCollection
      */
-    private $xAxes;
+    private $x;
 
     /**
      * @var YAxisCollection
      */
-    private $yAxes;
+    private $y;
 
     /**
      * @return XAxis
      */
-    public function createXAxis()
+    public function createX()
     {
         return new XAxis();
     }
@@ -39,33 +39,33 @@ class Scales implements ArraySerializableInterface, JsonSerializable
     /**
      * @return YAxis
      */
-    public function createYAxis()
+    public function createY()
     {
         return new YAxis();
     }
 
     /**
-     * @return XAxisCollection
+     * @return XAxis
      */
-    public function getXAxes()
+    public function getX()
     {
-        if (is_null($this->xAxes)) {
-            $this->xAxes = new XAxisCollection();
+        if (is_null($this->x)) {
+            $this->x = new XAxis();
         }
 
-        return $this->xAxes;
+        return $this->x;
     }
 
     /**
-     * @return YAxisCollection
+     * @return YAxis
      */
-    public function getYAxes()
+    public function getY()
     {
-        if (is_null($this->yAxes)) {
-            $this->yAxes = new YAxisCollection();
+        if (is_null($this->y)) {
+            $this->y = new YAxis();
         }
 
-        return $this->yAxes;
+        return $this->y;
     }
 
     /**

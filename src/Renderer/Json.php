@@ -11,17 +11,19 @@ use Laminas\Json\Json as JsonHelper;
  */
 class Json extends Renderer
 {
+
+
     /**
      * Render the necessary JSON for the chart to function in the frontend.
      *
-     * @param int|false $flags
+     * @param integer|false $flags
      *
      * @return string
      */
-    public function render($flags = null)
+    public function render($flags=null)
     {
         $config = [
-            'type' => constant(get_class($this->chart) . "::TYPE"),
+            'type' => constant(get_class($this->chart).'::TYPE'),
             'data' => [],
         ];
 
@@ -45,11 +47,18 @@ class Json extends Renderer
             $config['defaults'] = $defaults;
         }
 
+        $plugins = $this->chart->plugins()->jsonSerialize();
+        if (! empty($plugins)) {
+            $config['plugins'] = $plugins;
+        }
+
         $output = JsonHelper::encode($config, false, ['enableJsonExprFinder' => true]);
-        if ($flags & Renderer::RENDER_PRETTY) {
+        if (($flags & Renderer::RENDER_PRETTY)) {
             $output = JsonHelper::prettyPrint($output);
         }
 
         return $output;
     }
+
+
 }

@@ -6,6 +6,7 @@ use Nutsy\PHPChartJS\ArraySerializableInterface;
 use Nutsy\PHPChartJS\Delegate\ArraySerializable;
 use JsonSerializable;
 use Laminas\Json\Expr;
+use Nutsy\PHPChartJS\Options\Fonts;
 
 /**
  * Class Ticks
@@ -52,24 +53,9 @@ class Ticks implements ArraySerializableInterface, JsonSerializable
     private $display;
 
     /**
-     * @var string
+     * @var Font
      */
-    private $fontColor;
-
-    /**
-     * @var string
-     */
-    private $fontFamily;
-
-    /**
-     * @var int
-     */
-    private $fontSize;
-
-    /**
-     * @var string
-     */
-    private $fontStyle;
+    private $font;
 
     /**
      * @var int
@@ -247,83 +233,17 @@ class Ticks implements ArraySerializableInterface, JsonSerializable
     }
 
     /**
-     * @return string
-     */
-    public function getFontColor()
-    {
-        return $this->fontColor;
-    }
-
-    /**
-     * @param string $fontColor
+     * Return Font.
      *
-     * @return $this
+     * @return Font
      */
-    public function setFontColor($fontColor)
+    public function getFonts()
     {
-        $this->fontColor = strval($fontColor);
+        if (isset($this->font) === false) {
+            $this->font = new Fonts();
+        }
 
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getFontFamily()
-    {
-        return $this->fontFamily;
-    }
-
-    /**
-     * @param string $fontFamily
-     *
-     * @return $this
-     */
-    public function setFontFamily($fontFamily)
-    {
-        $this->fontFamily = strval($fontFamily);
-
-        return $this;
-    }
-
-    /**
-     * @return int
-     */
-    public function getFontSize()
-    {
-        return $this->fontSize;
-    }
-
-    /**
-     * @param int $fontSize
-     *
-     * @return $this
-     */
-    public function setFontSize($fontSize)
-    {
-        $this->fontSize = intval($fontSize);
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getFontStyle()
-    {
-        return $this->fontStyle;
-    }
-
-    /**
-     * @param string $fontStyle
-     *
-     * @return $this
-     */
-    public function setFontStyle($fontStyle)
-    {
-        $this->fontStyle = strval($fontStyle);
-
-        return $this;
+        return $this->font;
     }
 
     /**

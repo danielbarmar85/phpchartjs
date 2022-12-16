@@ -3,6 +3,7 @@
 namespace Nutsy\PHPChartJS;
 
 use Nutsy\PHPChartJS\Renderer\Html;
+use Laminas\Json\Expr;
 
 /**
  * Class Chart
@@ -219,7 +220,7 @@ abstract class Chart implements ChartInterface
      */
     public function addPlugin($plugin)
     {
-        $this->plugins()->append($plugin);
+        $this->plugins()->append(new Expr(strval($plugin)));
 
         return $this;
     }

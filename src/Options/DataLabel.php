@@ -5,25 +5,31 @@ namespace Nutsy\PHPChartJS\Options;
 use Nutsy\PHPChartJS\ArraySerializableInterface;
 use Nutsy\PHPChartJS\Delegate\ArraySerializable;
 use JsonSerializable;
+use Laminas\Json\Expr;
 
 /**
- * Class LineOptions
+ * Class DataLabel
  *
  * @package Nutsy\PHPChartJS\Options
  */
-class Title implements ArraySerializableInterface, JsonSerializable
+class DataLabel implements ArraySerializableInterface, JsonSerializable
 {
     use ArraySerializable;
 
     /**
-     * @var boolean
+     * @var string
      */
     private $display;
 
     /**
-     * @var string
+     * @var boolean
      */
-    private $position;
+    private $clip;
+
+    /**
+     * @var boolean
+     */
+    private $clamp;
 
     /**
      * @var string
@@ -31,19 +37,9 @@ class Title implements ArraySerializableInterface, JsonSerializable
     private $color;
 
     /**
-     * @var boolean
+     * @var Expr
      */
-    private $fullWidth;
-
-    /**
-     * @var integer
-     */
-    private $padding;
-
-    /**
-     * @var string
-     */
-    private $text;
+    private $formatter;
 
     /**
      * @var Fonts
@@ -61,35 +57,13 @@ class Title implements ArraySerializableInterface, JsonSerializable
 
 
     /**
-     * @param boolean $display
+     * @param string $display
      *
      * @return $this
      */
     public function setDisplay($display)
     {
-        $this->display = boolval($display);
-
-        return $this;
-    }
-
-
-    /**
-     * @return string
-     */
-    public function getPosition()
-    {
-        return $this->position;
-    }
-
-
-    /**
-     * @param string $position
-     *
-     * @return $this
-     */
-    public function setPosition($position)
-    {
-        $this->position = strval($position);
+        $this->display = strval($display);
 
         return $this;
     }
@@ -118,70 +92,69 @@ class Title implements ArraySerializableInterface, JsonSerializable
 
 
     /**
+     * @return Expr
+     */
+    public function getFormatter()
+    {
+        return $this->formatter;
+    }
+
+
+    /**
+     * @param string $formatter
+     *
+     * @return $this
+     */
+    public function setFormatter($formatter)
+    {
+        $this->formatter = new Expr(strval($formatter));
+
+        return $this;
+    }
+
+
+    /**
      * @return boolean
      */
-    public function isFullWidth()
+    public function getClamp()
     {
-        return $this->fullWidth;
+        return $this->clamp;
     }
 
 
     /**
-     * @param boolean $fullWidth
+     * @param boolean $clamp
      *
      * @return $this
      */
-    public function setFullWidth($fullWidth)
+    public function setClamp($clamp)
     {
-        $this->fullWidth = boolval($fullWidth);
+        $this->clamp = boolval($clamp);
 
         return $this;
     }
 
 
     /**
-     * @return integer
+     * @return boolean
      */
-    public function getPadding()
+    public function getClip()
     {
-        return $this->padding;
+        return $this->clip;
     }
 
 
     /**
-     * @param integer $padding
+     * @param boolean $clip
      *
      * @return $this
      */
-    public function setPadding($padding)
+    public function setClip($clip)
     {
-        $this->padding = intval($padding);
+        $this->clip = boolval($clip);
 
         return $this;
     }
-
-
-    /**
-     * @return string
-     */
-    public function getText()
-    {
-        return $this->text;
-    }
-
-
-    /**
-     * @param string $text
-     *
-     * @return $this
-     */
-    public function setText($text)
-    {
-        $this->text = strval($text);
-
-        return $this;
-    }
-
 
     /**
      * Return Font.

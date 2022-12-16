@@ -2,7 +2,7 @@
 
 namespace Nutsy\PHPChartJS\Options;
 
-use Halfpastfour\Collection\ArraySerializableInterface;
+use Nutsy\PHPChartJS\ArraySerializableInterface;
 use Nutsy\PHPChartJS\Delegate\ArraySerializable;
 use Nutsy\PHPChartJS\Options\Legend;
 use JsonSerializable;
@@ -41,6 +41,21 @@ class Plugins implements ArraySerializableInterface, JsonSerializable
         }
 
         return $this->title;
+    }
+
+
+    /**
+     * Return Data label.
+     *
+     * @return DataLabel
+     */
+    public function getDataLabel()
+    {
+        if (isset($this->datalabels) === false) {
+            $this->datalabels = new DataLabel();
+        }
+
+        return $this->datalabels;
     }
 
 

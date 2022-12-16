@@ -24,6 +24,11 @@ abstract class Scale implements ArraySerializableInterface, JsonSerializable
     protected $type;
 
     /**
+     * @var string
+     */
+    protected $bounds;
+
+    /**
      * @var bool
      */
     protected $display;
@@ -121,7 +126,7 @@ abstract class Scale implements ArraySerializableInterface, JsonSerializable
     /**
      * @var GridLines
      */
-    protected $gridLines;
+    protected $grid;
 
     /**
      * @var ScaleLabel
@@ -149,6 +154,27 @@ abstract class Scale implements ArraySerializableInterface, JsonSerializable
     public function setType($type)
     {
         $this->type = $type;
+
+        return $this;
+    }
+
+    
+    /**
+     * @return string
+     */
+    public function getBounds()
+    {
+        return $this->bounds;
+    }
+
+    /**
+     * @param string $bounds
+     *
+     * @return $this
+     */
+    public function setBounds($bounds)
+    {
+        $this->bounds = $bounds;
 
         return $this;
     }
@@ -536,21 +562,21 @@ abstract class Scale implements ArraySerializableInterface, JsonSerializable
     /**
      * @return GridLines
      */
-    public function getGridLines()
+    public function getGrid()
     {
-        return $this->gridLines;
+        return $this->grid;
     }
 
     /**
      * @return GridLines
      */
-    public function gridLines()
+    public function grid()
     {
-        if (is_null($this->gridLines)) {
-            $this->gridLines = new GridLines();
+        if (is_null($this->grid)) {
+            $this->grid = new GridLines();
         }
 
-        return $this->gridLines;
+        return $this->grid;
     }
 
     /**
