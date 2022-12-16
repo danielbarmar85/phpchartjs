@@ -37,6 +37,21 @@ class DataLabel implements ArraySerializableInterface, JsonSerializable
     private $color;
 
     /**
+     * @var integer
+     */
+    private $offset;
+
+    /**
+     * @var string
+     */
+    private $anchor;
+
+    /**
+     * @var string
+     */
+    private $align;
+
+    /**
      * @var Expr
      */
     private $formatter;
@@ -86,6 +101,72 @@ class DataLabel implements ArraySerializableInterface, JsonSerializable
     public function setColor($color)
     {
         $this->color = strval($color);
+
+        return $this;
+    }
+
+
+    /**
+     * @return string
+     */
+    public function getAnchor()
+    {
+        return $this->anchor;
+    }
+
+
+    /**
+     * @param string $anchor
+     *
+     * @return $this
+     */
+    public function setAnchor($anchor)
+    {
+        $this->anchor = strval($anchor);
+
+        return $this;
+    }
+
+
+    /**
+     * @return integer
+     */
+    public function getOffset()
+    {
+        return $this->offset;
+    }
+
+
+    /**
+     * @param integer $offset
+     *
+     * @return $this
+     */
+    public function setOffset($offset)
+    {
+        $this->offset = intval($offset);
+
+        return $this;
+    }
+
+
+    /**
+     * @return string
+     */
+    public function getAlign()
+    {
+        return $this->align;
+    }
+
+
+    /**
+     * @param string $align
+     *
+     * @return $this
+     */
+    public function setAlign($align)
+    {
+        $this->align = strval($align);
 
         return $this;
     }
