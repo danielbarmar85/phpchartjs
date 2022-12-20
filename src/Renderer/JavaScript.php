@@ -83,16 +83,20 @@ class JavaScript extends Renderer
           $script[] = 'Chart.register(chart_watermark_'.$this->chart->getId().');';
         }
 
-        // Defaults values.
-        $script[] = 'Chart.defaults.font.size = '.($this->chart->defaults()->getFonts()->getSize() ?? 8).';';
-        $script[] = 'Chart.defaults.font.family = "'.($this->chart->defaults()->getFonts()->getFamily() ?? 'Lato, sans-serif').'";';
-        $script[] = 'Chart.defaults.font.style = "'.($this->chart->defaults()->getFonts()->getStyle() ?? 'normal').'";';
+        
 
         // Create chart.
         $script[] = 'try {';
-        $script[] = "var chart = new Chart( ctx, {$json} );";
+        $script[] = "  var chart = new Chart( ctx, {$json} );";
+
+        // Defaults values.
+        $script[] = '  Chart.defaults.font.size = '.($this->chart->defaults()->getFonts()->getSize() ?? 8).';';
+        $script[] = '  Chart.defaults.font.family = "'.($this->chart->defaults()->getFonts()->getFamily() ?? 'Lato, sans-serif').'";';
+        $script[] = '  Chart.defaults.font.style = "'.($this->chart->defaults()->getFonts()->getStyle() ?? 'normal').'";';
+        $script[] = '  Chart.defaults.font.weight = "'.($this->chart->defaults()->getFonts()->getWeight() ?? '').'";';
+
         $script[] = '} catch (error) {';
-        $script[] = 'console.error(error);';
+        $script[] = '  console.error(error);';
         $script[] = '}';
 
         $scriptString = implode("\n", $script);

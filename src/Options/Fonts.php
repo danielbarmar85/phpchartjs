@@ -35,6 +35,11 @@ class Fonts implements ArraySerializableInterface, JsonSerializable
      */
     private $style;
 
+    /**
+     * @var string
+     */
+    private $weight;
+
 
     /**
      * @return integer
@@ -119,6 +124,28 @@ class Fonts implements ArraySerializableInterface, JsonSerializable
     public function setStyle($style)
     {
         $this->style = strval($style);
+
+        return $this;
+    }
+
+
+    /**
+     * @return string
+     */
+    public function getWeight()
+    {
+        return $this->weight;
+    }
+
+
+    /**
+     * @param string $weight
+     *
+     * @return $this
+     */
+    public function setWeight($weight)
+    {
+        $this->weight = strval($weight);
 
         return $this;
     }
